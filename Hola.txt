@@ -1,2 +1,2 @@
 jsdalkfj;a
-print("Hola uwu)
+print("Hola uwu")
