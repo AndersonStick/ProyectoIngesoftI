@@ -1,11 +1,13 @@
-import Layout from "../../hocs/layout"
+import Layout from "../../hocs/Layout"
 import { useState, useEffect } from 'react'
 
 import { connect } from "react-redux"
 import { signup } from '../../redux/actions/auth'
+import { Circles } from  'react-loader-spinner'
 
 function Signup({
-  signup
+  signup,
+  loading
 }) {
 
   useEffect(() => {
@@ -41,7 +43,8 @@ function Signup({
       password,
       re_password
       )
-      setAccountCreated(true);
+     setAccountCreated(true);
+     window.scrollTo(0,0)
   }
 
   return (
@@ -145,33 +148,28 @@ function Signup({
                 </div>
               </div>
 
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                    Remember me
-                  </label>
-                </div>
-
-                <div className="text-sm">
-                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                    Forgot your password?
-                  </a>
-                </div>
-              </div>
-
+              
               <div>
+                {loading ? 
                 <button
-                  type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Register
-                </button>
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                <Circles
+                height="15"
+                width="15"
+                color="#ffffff"
+                ariaLabel="circles-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+              />
+              </button>:
+              <button
+              type="submit"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Registrarse
+            </button>}
               </div>
             </form>
 
@@ -183,9 +181,9 @@ function Signup({
 }
 
 const mapStateToProps = state => ({
-
+    loading: state.Auth.loading
 })
 
 export default connect(mapStateToProps, {
-  signup
+   signup
 }) (Signup)

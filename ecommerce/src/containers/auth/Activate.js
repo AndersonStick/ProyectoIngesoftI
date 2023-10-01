@@ -1,4 +1,4 @@
-import Layout from "../../hocs/layout";
+import Layout from "../../hocs/Layout";
 import { useParams } from "react-router";
 import { useState } from "react";
 import { connect } from "react-redux";
