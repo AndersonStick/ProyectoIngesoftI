@@ -15,6 +15,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
+DOMAIN = os.environ.get('DOMAIN')
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -29,7 +31,7 @@ DJANGO_APPS = [
 
 PROJECT_APPS = ['apps.user']
 
-ECOMMERCE_APPS = []
+ECOMMERCE_APPS = ['apps.category','apps.product']
 
 THIRD_PARTY_APPS = [
     'corsheaders',
