@@ -211,7 +211,7 @@ const Shop = ({
                     <>
                     <h3 className="-mx-2 -my-3 flow-root">
                       <Disclosure.Button className="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500">
-                        <span className="font-sofiapro-regular text-gray-900">Prices</span>
+                        <span className="font-sofiapro-regular text-gray-900">Precio</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
                               <MinusSmIcon className="h-5 w-5" aria-hidden="true" />
@@ -329,7 +329,7 @@ const Shop = ({
         </Transition.Root>
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative z-10 flex items-baseline justify-between pt-24 pb-6 border-b border-gray-200">
+          <div className="relative z-10 flex items-baseline justify-between pt-10 pb-6 border-b border-gray-200">
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">Tienda</h1>
 
             <div className="flex items-center">              
@@ -419,7 +419,7 @@ const Shop = ({
                     <>
                     <h3 className="-mx-2 -my-3 flow-root">
                       <Disclosure.Button className="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500">
-                        <span className="font-sofiapro-regular text-gray-900">Prices</span>
+                        <span className="font-sofiapro-regular text-gray-900">Precio</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
                             <MinusSmIcon className="h-5 w-5" aria-hidden="true" />
@@ -528,7 +528,7 @@ const Shop = ({
 
                   <button
                     type="submit"
-                    className="float-right inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="float-right inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-custom-blue hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Buscar
                   </button>

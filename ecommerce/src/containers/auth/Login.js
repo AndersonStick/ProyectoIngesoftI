@@ -43,14 +43,14 @@ const Login = ({
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
             className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+            src="https://scontent.fbog2-5.fna.fbcdn.net/v/t39.30808-6/299573120_390962279840498_6685377062908282532_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeEfMlsfkEnF-am2ad-GZCmcr4zD9KSUWvyvjMP0pJRa_C4oKbpiRxdfRRiLZvQx4uTXiGku0Wh5ZpOX0pLDaLS1&_nc_ohc=m0Z8fg5xH04AX8-LApv&_nc_ht=scontent.fbog2-5.fna&oh=00_AfCvZqkqxeSOzq6z238vq3EiRurikdFgjacgD3ksIDNnDA&oe=651FD0D5"
             alt="Workflow"
           />
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Ingresa a tu cuenta</h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Or{' '}
-            <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
-              register
+            Ingresa tus datos o  {' '}
+            <Link to="/signup" className="font-medium text-custom-hover-blue hover:text-custom-blue">
+              Crea tu cuenta en nuestro ecommerce
             </Link>
           </p>
         </div>
@@ -60,7 +60,7 @@ const Login = ({
             <form onSubmit={e=>onSubmit(e)} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email address
+                  Correo electrónico
                 </label>
                 <div className="mt-1">
                   <input
@@ -68,6 +68,7 @@ const Login = ({
                     value={email}
                     onChange={e=>onChange(e)}
                     type="email"
+                    placeholder="example@mail.com"
                     required
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   />
@@ -76,7 +77,7 @@ const Login = ({
 
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                  Password
+                  Contraseña
                 </label>
                 <div className="mt-1">
                   <input
@@ -84,6 +85,7 @@ const Login = ({
                     value={password}
                     onChange={e=>onChange(e)}
                     type="password"
+                    placeholder="Contraseña"
                     required
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   />
@@ -91,7 +93,7 @@ const Login = ({
               </div>
 
               <div className="flex items-center justify-between">
-                {/* <div className="flex items-center">
+                <div className="flex items-center">
                   <input
                     id="remember-me"
                     name="remember-me"
@@ -99,13 +101,13 @@ const Login = ({
                     className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
                   />
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                    Remember me
+                    Recuérdame
                   </label>
-                </div> */}
+                </div>
 
                 <div className="text-sm">
-                  <Link to="/reset_password" className="font-medium text-indigo-600 hover:text-indigo-500">
-                    Forgot your password?
+                  <Link to="/reset_password" className="font-medium text-custom-hover-blue hover:text-custom-blue">
+                    ¿Olvidaste tu contraseña?
                   </Link>
                 </div>
               </div>
@@ -113,7 +115,7 @@ const Login = ({
               <div>
                 {loading ? 
                 <button
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-blue hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <Circles
                 height="15"
@@ -127,9 +129,9 @@ const Login = ({
               </button>:
               <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-blue hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              Login
+              Ingresar
             </button>}
               </div>
             </form>

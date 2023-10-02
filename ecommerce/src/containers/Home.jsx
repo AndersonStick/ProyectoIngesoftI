@@ -18,7 +18,7 @@ const Home = ({
 
     useEffect(() => {
         window.scrollTo(0, 0);
-
+        document.title = 'Motospit Ecommerce';
         get_products_by_arrival();
         get_products_by_sold();
     }, []);

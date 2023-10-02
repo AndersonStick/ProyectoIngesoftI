@@ -5,11 +5,10 @@ export default function Example() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">
               <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                Summer styles are finally here
+                ¡Los descuentos de Ingesoft I están aquí!
               </h1>
               <p className="mt-4 text-xl text-gray-500">
-                This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
-                if you live or die.
+              Este verano, en Motospits, protege tu moto y tu seguridad en la carretera con nuestra nueva colección de repuestos de alta calidad. ¡Rueda con confianza! 🏍️✨
               </p>
             </div>
             <div>
@@ -24,37 +23,14 @@ export default function Example() {
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                           <img
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                            src="https://http2.mlstatic.com/D_NQ_NP_2X_973822-MLU71580227898_092023-F.webp"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                            alt=""
-                            className="w-full h-full object-center object-cover"
-                          />
-                        </div>
-                      </div>
-                      <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                            alt=""
-                            className="w-full h-full object-center object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                            alt=""
-                            className="w-full h-full object-center object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                            src="https://http2.mlstatic.com/D_NQ_NP_2X_623521-MCO47951280532_102021-F.webp"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
@@ -63,14 +39,37 @@ export default function Example() {
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                            src="https://http2.mlstatic.com/D_NQ_NP_2X_940521-MCO71635109274_092023-F.webp"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                            src="https://http2.mlstatic.com/D_NQ_NP_2X_868241-MCO44358226567_122020-F.webp"
+                            alt=""
+                            className="w-full h-full object-center object-cover"
+                          />
+                        </div>
+                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                          <img
+                            src="https://http2.mlstatic.com/D_NQ_NP_2X_747210-MCO44172916376_112020-F.webp"
+                            alt=""
+                            className="w-full h-full object-center object-cover"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                          <img
+                            src="https://http2.mlstatic.com/D_NQ_NP_2X_672877-MLU70794469184_082023-F.webp"
+                            alt=""
+                            className="w-full h-full object-center object-cover"
+                          />
+                        </div>
+                        <div className="w-44 h-64 rounded-lg overflow-hidden">
+                          <img
+                            src="https://http2.mlstatic.com/D_NQ_NP_2X_653472-MCO50825449659_072022-F.webp"
                             alt=""
                             className="w-full h-full object-center object-cover"
                           />
@@ -81,10 +80,10 @@ export default function Example() {
                 </div>
   
                 <a
-                  href="#"
-                  className="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700"
+                  href="/shop"
+                  className="inline-block text-center bg-custom-blue border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-custom-hover-blue"
                 >
-                  Shop Collection
+                  Compra Ahora
                 </a>
               </div>
             </div>

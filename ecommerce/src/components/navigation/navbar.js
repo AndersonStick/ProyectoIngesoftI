@@ -204,7 +204,7 @@ function Navbar({
       </Link>
       <Link
         to="/signup"
-        className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+        className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-custom-blue hover:bg-custom-hover-blue"
       >
         Registrarse
       </Link>
@@ -216,13 +216,13 @@ function Navbar({
     <Popover className="relative bg-white">
       <div className="absolute inset-0 shadow z-30 pointer-events-none" aria-hidden="true" />
       <div className="relative z-20">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-1 sm:px-6 sm:py-1 lg:px-8 md:justify-start md:space-x-10">
           <div>
               <Link to="/" className="flex">
                 <span className="sr-only">Workflow</span>
                 <img
-                  className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                  className="h-8 w-auto sm:h-20"
+                  src="https://scontent.fbog2-5.fna.fbcdn.net/v/t39.30808-6/299573120_390962279840498_6685377062908282532_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeEfMlsfkEnF-am2ad-GZCmcr4zD9KSUWvyvjMP0pJRa_C4oKbpiRxdfRRiLZvQx4uTXiGku0Wh5ZpOX0pLDaLS1&_nc_ohc=m0Z8fg5xH04AX8-LApv&_nc_ht=scontent.fbog2-5.fna&oh=00_AfCvZqkqxeSOzq6z238vq3EiRurikdFgjacgD3ksIDNnDA&oe=651FD0D5"
                   alt=""
                 />
             </Link>
@@ -347,7 +347,7 @@ function Navbar({
                   Registrarse
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{' '}
+                  ¿Usuario registrado?{' '}
                   <a href="#" className="text-indigo-600 hover:text-indigo-500">
                     Iniciar Sesión
                   </a>

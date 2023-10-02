@@ -40,19 +40,19 @@ const navigation = {
     { name: 'Terms', href: '#' },
   ],
   social: [
-    // {
-    //   name: 'Facebook',
-    //   href: '#',
-    //   icon: (props) => (
-    //     <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-    //       <path
-    //         fillRule="evenodd"
-    //         d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-    //         clipRule="evenodd"
-    //       />
-    //     </svg>
-    //   ),
-    // },
+    {
+      name: 'Facebook',
+      href: 'https://www.facebook.com/profile.php?id=100067801883211',
+      icon: (props) => (
+        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+          <path
+            fillRule="evenodd"
+            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+            clipRule="evenodd"
+          />
+        </svg>
+      ),
+    },
     // {
     //   name: 'Instagram',
     //   href: '#',
@@ -168,14 +168,14 @@ export default function Footer() {
           </div>
           <div className="mt-8 xl:mt-0">
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Subscribe to our newsletter
+              CONTACTO
             </h3>
             <p className="mt-4 text-base text-gray-500">
-              The latest news, articles, and resources, sent to your inbox weekly.
+            Estamos aquí para ayudarte en cada etapa de tu viaje en moto. Contáctanos si necesitas asesoramiento o repuestos. Tu satisfacción es nuestra prioridad. Gracias por confiar en nosotros
             </p>
             <form className="mt-4 sm:flex sm:max-w-md">
               <label htmlFor="email-address" className="sr-only">
-                Email address
+                Correo electrónico
               </label>
               <input
                 type="email"
@@ -184,14 +184,14 @@ export default function Footer() {
                 autoComplete="email"
                 required
                 className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
-                placeholder="Enter your email"
+                placeholder="Ingresa tu correo electrónico"
               />
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-indigo-600 flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full bg-custom-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-custom-hover-blue focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Subscribe
+                  Enviar
                 </button>
               </div>
             </form>
@@ -207,7 +207,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            2020 Workflow, Inc. All rights reserved.
+            2023 El último y nos vamos, Grupo de Ingeniería de Software I.
           </p>
         </div>
       </div>
