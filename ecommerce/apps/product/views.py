@@ -269,7 +269,7 @@ class ListBySearchView(APIView):
         elif price_range == '40000 - 59000':
             product_results = product_results.filter(price__gte=40000)
             product_results = product_results.filter(price__lt=60000)
-        elif price_range == '60000 - 79000':
+        elif price_range == '60000 - 99000':
             product_results = product_results.filter(price__gte=60000)
             product_results = product_results.filter(price__lt=100000)
         elif price_range == 'More than 100000':
