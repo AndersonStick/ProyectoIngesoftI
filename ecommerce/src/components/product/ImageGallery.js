@@ -64,7 +64,7 @@ const ImageGallery=({photo})=>{
                         </span>
                         <span
                           className={classNames(
-                            selected ? 'ring-indigo-500' : 'ring-transparent',
+                            selected ? 'ring-custom-blue' : 'ring-transparent',
                             'absolute inset-0 rounded-md ring-2 ring-offset-2 pointer-events-none'
                           )}
                           aria-hidden="true"

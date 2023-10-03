@@ -36,7 +36,7 @@ import { Link } from "react-router-dom"
           </div>
   
           <div className="mt-6 sm:hidden">
-            <Link to="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+            <Link to="#" className="block text-sm font-semibold text-custom-blue hover:text-custom-blue">
               Ver más productos<span aria-hidden="true"> &rarr;</span>
             </Link>
           </div>

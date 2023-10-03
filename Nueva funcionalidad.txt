@@ -1,3 +1,7 @@
+Cambiar logo en Recuperacion de contraseña
+
+
+
 Nueva funcionalidad:
 
 1. Apps nueva carpeta
