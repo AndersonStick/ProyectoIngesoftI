@@ -237,7 +237,7 @@ function Navbar({
             <Popover.Group as="nav" className="flex space-x-10">
               
               <NavLink to="/shop" className="mt-2 text-base font-medium text-gray-500 hover:text-gray-900">
-                Tienda
+                Catálogo
               </NavLink>
 
               {window.location.pathname==='/search'?<></>:<SearchBox 
