@@ -205,6 +205,11 @@ AUTH_USER_MODEL='user.UserAccount'
 
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS =True
+EMAIL_PORT =587
+EMAIL_HOST_USER ='motospitecommerce@gmail.com'
+EMAIL_HOST_PASSWORD = 'kuwg amjq mgok hlvz'
 
 if not DEBUG:
     DEFAULT_FROM_EMAIL = 'Vudera - Academia de Software <mail@vudera.com>' # Formato del correo

@@ -1,9 +1,12 @@
 import Layout from "../../hocs/Layout"
 import { useState, useEffect } from 'react'
 
+import React, {Component} from "react"
+
 import { connect } from "react-redux"
 import { signup } from '../../redux/actions/auth'
 import { Circles } from  'react-loader-spinner'
+import emailjs from 'emailjs-com';
 
 function Signup({
   signup,
@@ -47,6 +50,7 @@ function Signup({
      window.scrollTo(0,0)
   }
 
+    
   return (
     <Layout>
       <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -181,6 +185,7 @@ function Signup({
     </Layout>
   )
 }
+
 
 const mapStateToProps = state => ({
     loading: state.Auth.loading
