@@ -15,6 +15,8 @@ import Shop from './containers/Shop';
 import ProductDetail from './containers/pages/productDetail';
 
 import Search from './containers/pages/Search';
+import Cart from './containers/pages/Cart';
+import Checkout from './containers/pages/Checkout';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path="*" element={<Error404/>}/>
           {/* Main Pages */}
           <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/cart" element={<Cart/>}/>
+          <Route exact path="/checkout" element={<Checkout/>}/>
 
 
           {/* Authentication */}

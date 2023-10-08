@@ -23,7 +23,7 @@ import {
   ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
-import { SortAscendingIcon, UsersIcon, ChevronDownIcon, SearchCircleIcon, SearchIcon } from '@heroicons/react/solid'
+import { ShoppingCartIcon } from '@heroicons/react/solid'
 
 import { connect } from 'react-redux'
 import { logout } from '../../redux/actions/auth'
@@ -99,7 +99,8 @@ function Navbar({
   logout,
   get_categories,
   categories,
-  get_search_products
+  get_search_products,
+  total_items
 }) {
 
   // eslint-disable-next-line
@@ -222,12 +223,16 @@ function Navbar({
                 <span className="sr-only">Workflow</span>
                 <img
                   className="h-8 w-auto sm:h-20"
-                  src="https://scontent.fbog2-5.fna.fbcdn.net/v/t39.30808-6/299573120_390962279840498_6685377062908282532_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeEfMlsfkEnF-am2ad-GZCmcr4zD9KSUWvyvjMP0pJRa_C4oKbpiRxdfRRiLZvQx4uTXiGku0Wh5ZpOX0pLDaLS1&_nc_ohc=m0Z8fg5xH04AX8-LApv&_nc_ht=scontent.fbog2-5.fna&oh=00_AfCvZqkqxeSOzq6z238vq3EiRurikdFgjacgD3ksIDNnDA&oe=651FD0D5"
+                  src="https://scontent.fbog2-3.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=WJEwNqKlrjEAX-IpySI&_nc_ht=scontent.fbog2-3.fna&oh=00_AfBQcCdPSS4DU0V7ptCk4lN9HNb1oZmXX5E40H9JCtY5hA&oe=65259412"
                   alt=""
                 />
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
+            <Link to="/cart" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-custom-blue">
+              <span className="sr-only">Open menu</span>
+              <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+            </Link>
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-custom-blue">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -246,10 +251,13 @@ function Navbar({
               onSubmit={onSubmit}
               categories={categories}
               />}
-              
-   
+
             </Popover.Group>
             <div className="flex items-center md:ml-12">
+              <Link to="/cart">
+                <ShoppingCartIcon className="h-8 w-8 cursor-pointer text-gray-300 mr-4"/>
+                <span className="text-xs absolute top-1 mt-3 ml-4 bg-red-500 text-white font-semibold rounded-full px-2 text-center">{total_items}</span>
+              </Link>
               {
                 isAuthenticated ? authLinks:guestLinks
               }
@@ -366,7 +374,8 @@ function Navbar({
 const mapStateToProps = state => ({
   isAuthenticated: state.Auth.isAuthenticated,
   user: state.Auth.user,
-  categories: state.Categories.categories
+  categories: state.Categories.categories,
+  total_items: state.Cart.total_items
 })
 
 export default connect(mapStateToProps,{

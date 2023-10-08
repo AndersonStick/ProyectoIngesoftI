@@ -1,31 +1,51 @@
 import { connect } from "react-redux";
 import Layout from "../../hocs/Layout"
 import { useParams } from "react-router";
-
+import { useNavigate } from "react-router-dom";
 import { 
     get_product,
     get_related_products
 } from "../../redux/actions/products";
-import { useEffect, useState } from "react";
-import { Disclosure, RadioGroup, Tab } from '@headlessui/react'
-import { StarIcon } from '@heroicons/react/solid'
-import { HeartIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/outline'
-import ImageGallery from "../../components/product/ImageGallery";
 
-  
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
+import { 
+    get_items,
+    add_item,
+    get_total,
+    get_item_total
+} from "../../redux/actions/cart";
+
+import { useEffect, useState } from "react";
+import { HeartIcon } from '@heroicons/react/outline'
+import ImageGallery from "../../components/product/ImageGallery";
+import { Circles } from  'react-loader-spinner'
 
 
 const ProductDetail =({
     get_product,
     get_related_products,
-    product
+    product, 
+    get_items,
+    add_item,
+    get_total,
+    get_item_total
 })=>{
 
-    const [selectedColor, setSelectedColor] = useState(false)
+  const [loading, setLoading] =useState(false);
 
+  const navigate = useNavigate();
+
+  const addToCart = async () => {
+    if (product && product !== null && product !== undefined && product.quantity > 0) { 
+        setLoading(true)
+        await add_item(product);
+        await get_items();
+        await get_total();
+        await get_item_total();
+        setLoading(false)
+        navigate('/cart')
+    }
+  }
+  
     const params = useParams()
     const productId = params.productId
 
@@ -61,15 +81,45 @@ const ProductDetail =({
             </div>
 
             
-            <form className="mt-6">
+            <div className="mt-6">
+            <p className="mt-4">
+                  {
+                      product && 
+                      product !== null &&
+                      product !== undefined && 
+                      product.quantity > 0 ? (
+                          <span className='text-green-500'>
+                              In Stock
+                          </span>
+                      ) : (
+                          <span className='text-red-500'>
+                              Out of Stock
+                          </span>
+                      )
+                  }
+              </p>
               
-              <div className="mt-10 flex sm:flex-col1">
+              <div className="mt-4 flex sm:flex-col1">
+              
+              {loading ? 
+              <button
+                className="max-w-xs flex-1 bg-custom-blue border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue sm:w-full">
+                  <Circles
+                    height="15"
+                    width="15"
+                    color="#ffffff"
+                    ariaLabel="circles-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                  />
+                </button>:
                 <button
-                  type="submit"
-                  className="max-w-xs flex-1 bg-custom-blue border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue sm:w-full"
-                >
-                  Añadir al carrito
+                onClick={addToCart}
+                className="max-w-xs flex-1 bg-custom-blue border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue sm:w-full">
+                  Agregar al carrito
                 </button>
+                }
 
                 <button
                   type="button"
@@ -79,7 +129,7 @@ const ProductDetail =({
                   <span className="sr-only">Añadir a favoritos</span>
                 </button>
               </div>
-            </form>
+            </div>
 
           </div>
         </div>
@@ -96,4 +146,8 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps,{
     get_product,
     get_related_products,
+    get_items,
+    add_item,
+    get_total,
+    get_item_total
 }) (ProductDetail)
