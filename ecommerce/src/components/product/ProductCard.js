@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 const ProductCard =({product})=>{
     return(
         
@@ -12,10 +12,10 @@ const ProductCard =({product})=>{
                   />
                 </div>
                 <h3 className="mt-4 flex justify-between text-gray-500">
-                  <Link to={`/product/${product.id}`}>
+                  {/* <Link to={`/product/${product.id}`}> */}
                     <span className="absolute inset-0" />
                     {product.name}
-                  </Link>
+                  {/* </Link> */}
                 </h3>
                 <p className="mt-1 text-sm text-gray-900">${product.price}</p>
               </div>

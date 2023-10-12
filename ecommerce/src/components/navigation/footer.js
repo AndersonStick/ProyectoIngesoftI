@@ -1,19 +1,3 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 const navigation = {
   solutions: [
     { name: 'Marketing', href: '#' },
@@ -106,7 +90,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="bg-custom-blue" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -115,11 +99,11 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Solutions</h3>
                 <ul className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-base text-white hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -127,11 +111,11 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Support</h3>
                 <ul className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-base text-white hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -141,11 +125,11 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Company</h3>
                 <ul className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-base text-white hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -153,11 +137,11 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Legal</h3>
                 <ul className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+                      <a href={item.href} className="text-base text-white hover:text-white">
                         {item.name}
                       </a>
                     </li>
@@ -167,10 +151,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-8 xl:mt-0">
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">
               CONTACTO
             </h3>
-            <p className="mt-4 text-base text-gray-500">
+            <p className="mt-4 text-base text-white">
             Estamos aquí para ayudarte en cada etapa de tu viaje en moto. Contáctanos si necesitas asesoramiento o repuestos. Tu satisfacción es nuestra prioridad. Gracias por confiar en nosotros
             </p>
             <form className="mt-4 sm:flex sm:max-w-md">
@@ -183,13 +167,13 @@ export default function Footer() {
                 id="email-address"
                 autoComplete="email"
                 required
-                className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-custom-blue focus:border-custom-blue focus:placeholder-gray-400"
+                className="appearance-none min-w-0 w-full bg-white border border-white rounded-md shadow-sm py-2 px-4 text-base text-white placeholder-white focus:outline-none focus:ring-custom-blue focus:border-custom-blue focus:placeholder-white"
                 placeholder="Ingresa tu correo electrónico"
               />
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-custom-blue flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-custom-hover-blue focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
+                  className="w-full bg-white flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-custom-blue hover:bg-custom-hover-blue focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
                 >
                   Enviar
                 </button>
@@ -197,16 +181,16 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 border-t border-white pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+              <a key={item.name} href={item.href} className="text-white hover:text-white">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+          <p className="mt-8 text-base text-white md:mt-0 md:order-1">
             2023 El último y nos vamos, Grupo de Ingeniería de Software I.
           </p>
         </div>

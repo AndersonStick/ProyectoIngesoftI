@@ -5,6 +5,7 @@ from rest_framework import permissions
 
 from .models import Category
 
+
 class ListCategoriesView(APIView):
     permission_classes = (permissions.AllowAny, )
     

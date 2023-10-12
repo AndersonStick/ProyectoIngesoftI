@@ -4,25 +4,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { Navigate } from 'react-router'
 import Alert from '../../components/alert'
 
-import {
-  BookmarkAltIcon,
-  BriefcaseIcon,
-  ChartBarIcon,
-  CheckCircleIcon,
-  CursorClickIcon,
-  DesktopComputerIcon,
-  GlobeAltIcon,
-  InformationCircleIcon,
-  MenuIcon,
-  NewspaperIcon,
-  OfficeBuildingIcon,
-  PhoneIcon,
-  PlayIcon,
-  ShieldCheckIcon,
-  UserGroupIcon,
-  ViewGridIcon,
-  XIcon,
-} from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ShoppingCartIcon } from '@heroicons/react/solid'
 
 import { connect } from 'react-redux'
@@ -31,63 +13,7 @@ import { get_categories } from '../../redux/actions/categories'
 import { get_search_products } from '../../redux/actions/products'
 import SearchBox from './SearchBox'
 
-const solutions = [
-  {
-    name: 'Analytics',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
-    icon: ChartBarIcon,
-  },
-  {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: CursorClickIcon,
-  },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: ViewGridIcon,
-  },
-]
-const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'View All Products', href: '#', icon: CheckCircleIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
-const company = [
-  { name: 'About', href: '#', icon: InformationCircleIcon },
-  { name: 'Customers', href: '#', icon: OfficeBuildingIcon },
-  { name: 'Press', href: '#', icon: NewspaperIcon },
-  { name: 'Careers', href: '#', icon: BriefcaseIcon },
-  { name: 'Privacy', href: '#', icon: ShieldCheckIcon },
-]
-const resources = [
-  { name: 'Community', href: '#', icon: UserGroupIcon },
-  { name: 'Partners', href: '#', icon: GlobeAltIcon },
-  { name: 'Guides', href: '#', icon: BookmarkAltIcon },
-  { name: 'Webinars', href: '#', icon: DesktopComputerIcon },
-]
-const blogPosts = [
-  {
-    id: 1,
-    name: 'Boost your conversion rate',
-    href: '#',
-    preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80',
-  },
-  {
-    id: 2,
-    name: 'How to use search engine optimization to drive traffic to your site',
-    href: '#',
-    preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80',
-  },
-]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -223,7 +149,7 @@ function Navbar({
                 <span className="sr-only">Workflow</span>
                 <img
                   className="h-8 w-auto sm:h-20"
-                  src="https://scontent.fbog2-3.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=WJEwNqKlrjEAX-IpySI&_nc_ht=scontent.fbog2-3.fna&oh=00_AfBQcCdPSS4DU0V7ptCk4lN9HNb1oZmXX5E40H9JCtY5hA&oe=65259412"
+                  src="https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=zwQ45HywrMUAX9pSwkh&_nc_ht=scontent.fbog4-2.fna&oh=00_AfB5PzpKMLulKQGfB7_drU-1MPNDJAcgn6W1qQpOtBpYNA&oe=652B82D2"
                   alt=""
                 />
             </Link>
@@ -254,10 +180,10 @@ function Navbar({
 
             </Popover.Group>
             <div className="flex items-center md:ml-12">
-              <Link to="/cart">
+              {/* <Link to="/cart"> */}
                 <ShoppingCartIcon className="h-8 w-8 cursor-pointer text-gray-300 mr-4"/>
                 <span className="text-xs absolute top-1 mt-3 ml-4 bg-red-500 text-white font-semibold rounded-full px-2 text-center">{total_items}</span>
-              </Link>
+              {/* </Link> */}
               {
                 isAuthenticated ? authLinks:guestLinks
               }
@@ -285,7 +211,7 @@ function Navbar({
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src="https://scontent.fbog2-3.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=WJEwNqKlrjEAX-IpySI&_nc_ht=scontent.fbog2-3.fna&oh=00_AfBQcCdPSS4DU0V7ptCk4lN9HNb1oZmXX5E40H9JCtY5hA&oe=65259412"
                     alt="Workflow"
                   />
                 </div>
@@ -298,65 +224,26 @@ function Navbar({
               </div>
               <div className="mt-6 sm:mt-8">
                 <nav>
-                  <div className="grid gap-7 sm:grid-cols-2 sm:gap-y-8 sm:gap-x-4">
-                    {solutions.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center p-3 rounded-lg hover:bg-gray-50"
-                      >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-custom-blue text-white sm:h-12 sm:w-12">
-                          <item.icon className="h-6 w-6" aria-hidden="true" />
-                        </div>
-                        <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
-                      </a>
-                    ))}
-                  </div>
                   <div className="mt-8 text-base">
-                    <a href="#" className="font-medium text-custom-blue hover:text-custom-blue">
+                    <a href='/shop' className="font-medium text-custom-blue hover:text-custom-blue">
                       {' '}
-                      View all products <span aria-hidden="true">&rarr;</span>
+                      Ver todos los productos <span aria-hidden="true">&rarr;</span>
                     </a>
                   </div>
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5">
-              <div className="grid grid-cols-2 gap-4">
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Pricing
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Docs
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Company
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Resources
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Blog
-                </a>
-
-                <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
-                  Contact Sales
-                </a>
-              </div>
               <div className="mt-6">
                 <a
-                  href="#"
+                  href="/signup"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-custom-blue hover:bg-custom-hover-blue"
                 >
                   Registrarse
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   ¿Usuario registrado?{' '}
-                  <a href="#" className="text-custom-blue hover:text-custom-hover-blue">
+                  <a href="/login" className="text-custom-blue hover:text-custom-hover-blue">
                     Iniciar Sesión
                   </a>
                 </p>

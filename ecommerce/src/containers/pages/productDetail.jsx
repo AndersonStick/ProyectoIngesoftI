@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Layout from "../../hocs/Layout"
 import { useParams } from "react-router";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { 
     get_product,
     get_related_products
@@ -32,19 +32,19 @@ const ProductDetail =({
 
   const [loading, setLoading] =useState(false);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const addToCart = async () => {
-    if (product && product !== null && product !== undefined && product.quantity > 0) { 
-        setLoading(true)
-        await add_item(product);
-        await get_items();
-        await get_total();
-        await get_item_total();
-        setLoading(false)
-        navigate('/cart')
-    }
-  }
+  // const addToCart = async () => {
+  //   if (product && product !== null && product !== undefined && product.quantity > 0) { 
+  //       setLoading(true)
+  //       await add_item(product);
+  //       await get_items();
+  //       await get_total();
+  //       await get_item_total();
+  //       setLoading(false)
+  //       navigate('/cart')
+  //   }
+  // }
   
     const params = useParams()
     const productId = params.productId
@@ -115,9 +115,9 @@ const ProductDetail =({
                   />
                 </button>:
                 <button
-                onClick={addToCart}
+                // onClick={addToCart}
                 className="max-w-xs flex-1 bg-custom-blue border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue sm:w-full">
-                  Agregar al carrito
+                  Añadir al carrito
                 </button>
                 }
 

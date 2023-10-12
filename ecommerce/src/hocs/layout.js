@@ -3,8 +3,6 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import { check_authenticated, load_user, refresh } from '../redux/actions/auth';
 import {
-    remove_item,
-    update_item,
     get_items,
     get_total,
     get_item_total

@@ -5,10 +5,10 @@ export default function Example() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">
               <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                ¡Los descuentos de Ingesoft I están aquí!
+              ¡No te asustes por los precios, son los más bajos del año! 💀👻
               </h1>
               <p className="mt-4 text-xl text-gray-500">
-              Este verano, en Motospits, protege tu moto y tu seguridad en la carretera con nuestra nueva colección de repuestos de alta calidad. ¡Rueda con confianza! 🏍️✨
+              Compra ahora y prepara tu moto para una noche llena de emociones. ¡No dejes que los fantasmas te alcancen, aprovecha estas ofertas espeluznantes hoy mismo! 🦇✨ #HalloweenEnMoto 🕷️🕸️
               </p>
             </div>
             <div>

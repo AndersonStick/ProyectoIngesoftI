@@ -1,12 +1,11 @@
 import Layout from "../../hocs/Layout"
 import { useState, useEffect } from 'react'
 
-import React, {Component} from "react"
+import React from "react"
 
 import { connect } from "react-redux"
 import { signup } from '../../redux/actions/auth'
 import { Circles } from  'react-loader-spinner'
-import emailjs from 'emailjs-com';
 
 function Signup({
   signup,
@@ -57,7 +56,7 @@ function Signup({
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
             className="mx-auto h-12 w-auto"
-            src="https://scontent.fbog2-3.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=WJEwNqKlrjEAX-IpySI&_nc_ht=scontent.fbog2-3.fna&oh=00_AfBQcCdPSS4DU0V7ptCk4lN9HNb1oZmXX5E40H9JCtY5hA&oe=65259412"
+            src="https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=zwQ45HywrMUAX9pSwkh&_nc_ht=scontent.fbog4-2.fna&oh=00_AfB5PzpKMLulKQGfB7_drU-1MPNDJAcgn6W1qQpOtBpYNA&oe=652B82D2"
             alt="Workflow"
           />
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Crear una nueva cuenta</h2>
@@ -65,13 +64,12 @@ function Signup({
             Agrega tu información para crear una cuenta en nuestro Ecommerce
           </p>
         </div>
-
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <form onSubmit={e=>onSubmit(e)} className="space-y-6">
               <div>
                 <label htmlFor="first_name" className="block text-sm font-medium text-gray-700">
-                  Nombres
+                  Nombre(s)
                 </label>
                 <div className="mt-1">
                   <input
@@ -85,10 +83,9 @@ function Signup({
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">
-                  Apellidos
+                  Apellido(s)
                 </label>
                 <div className="mt-1">
                   <input
@@ -102,7 +99,6 @@ function Signup({
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Correo electrónico
@@ -119,10 +115,9 @@ function Signup({
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                  Constraseña
+                  Contraseña
                 </label>
                 <div className="mt-1">
                   <input
@@ -136,10 +131,9 @@ function Signup({
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                  Repetir Constraseña
+                  Repetir Contraseña
                 </label>
                 <div className="mt-1">
                   <input
@@ -153,32 +147,30 @@ function Signup({
                   />
                 </div>
               </div>
-
-              
               <div>
                 {loading ? 
                 <button
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-blue hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
-              >
-                <Circles
-                height="15"
-                width="15"
-                color="#ffffff"
-                ariaLabel="circles-loading"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-              />
-              </button>:
-              <button
-              type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-blue hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
-            >
-              Registrar
-            </button>}
+                >
+                  <Circles
+                    height="15"
+                    width="15"
+                    color="#ffffff"
+                    ariaLabel="circles-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                  />
+                </button>:
+                <button
+                type="submit"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-custom-blue hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
+                >
+                  Registrar
+                </button>
+                }
               </div>
             </form>
-
           </div>
         </div>
       </div>

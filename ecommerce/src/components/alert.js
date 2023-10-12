@@ -8,15 +8,15 @@ function Alert ({ alert }) {
     const displayAlert = () => {
         if (alert !== null){
             return (
-                <div className={`rounded-md bg-${alert.alertType}-50 p-4`}>
-                <div className="flex">
-                    <div className="flex-shrink-0">
-                    <CheckCircleIcon className={`h-5 w-5 text-${alert.alertType}-400`} aria-hidden="true" />
+                <div className={`rounded-md ${alert.alertColor} p-4`}>
+                    <div className="flex">
+                        <div className="flex-shrink-0">
+                        <CheckCircleIcon className={`h-5 w-5 text-gray-700`} aria-hidden="true" />
+                        </div>
+                        <div className="ml-3">
+                        <p className={`text-sm font-medium text-gray-800`}>{alert.msg}</p>
+                        </div>
                     </div>
-                    <div className="ml-3">
-                    <p className={`text-sm font-medium text-${alert.alertType}-800`}>{alert.msg}</p>
-                    </div>
-                </div>
                 </div>
             )
         } else {
