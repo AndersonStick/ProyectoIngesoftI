@@ -13,12 +13,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = True
+DEBUG = False
 
 DOMAIN = os.environ.get('DOMAIN')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'www.deployabarrerat.com',
+    'deployabarrerat.com',
+    'motospit.com.co',
+    'www.motospit.com.co',
+    'localhost',
+    '127.0.0.1'
+]
 
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 DJANGO_APPS = [
     'django.contrib.admin',
@@ -100,6 +110,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
+    'http://motospit.com.co',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -107,6 +118,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
+    'http://motospit.com.co',
 ]
 
 PASSWORD_HASHERS = [
@@ -208,13 +220,8 @@ BT_PRIVATE_KEY = os.environ.get('BT_PRIVATE_KEY')
 
 AUTH_USER_MODEL='user.UserAccount'
 
-
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_USE_TLS =True
-EMAIL_PORT =587
-EMAIL_HOST_USER ='motospitecommerce@gmail.com'
-EMAIL_HOST_PASSWORD = 'kuwg amjq mgok hlvz'
+
 
 if not DEBUG:
     DEFAULT_FROM_EMAIL = 'Vudera - Academia de Software <mail@vudera.com>' # Formato del correo
