@@ -146,7 +146,7 @@ function Navbar({
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-1 sm:px-6 sm:py-1 lg:px-8 md:justify-start md:space-x-10">
           <div>
               <Link to="/" className="flex">
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">Logo Motospit</span>
                 <img
                   className="h-8 w-auto sm:h-20"
                   src="https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=zwQ45HywrMUAX9pSwkh&_nc_ht=scontent.fbog4-2.fna&oh=00_AfB5PzpKMLulKQGfB7_drU-1MPNDJAcgn6W1qQpOtBpYNA&oe=652B82D2"
@@ -211,8 +211,8 @@ function Navbar({
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://scontent.fbog2-3.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=WJEwNqKlrjEAX-IpySI&_nc_ht=scontent.fbog2-3.fna&oh=00_AfBQcCdPSS4DU0V7ptCk4lN9HNb1oZmXX5E40H9JCtY5hA&oe=65259412"
-                    alt="Workflow"
+                    src="https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=zwQ45HywrMUAX9pSwkh&_nc_ht=scontent.fbog4-2.fna&oh=00_AfB5PzpKMLulKQGfB7_drU-1MPNDJAcgn6W1qQpOtBpYNA&oe=652B82D2"
+                    alt="Logo Motospit"
                   />
                 </div>
                 <div className="-mr-2">
