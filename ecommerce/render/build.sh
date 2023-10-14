@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Exit on error
+cd ./ecommerce/
+
 set -o errexit
 
 pip install -r requirements.txt
