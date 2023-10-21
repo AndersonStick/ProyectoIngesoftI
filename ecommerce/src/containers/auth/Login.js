@@ -43,7 +43,7 @@ const Login = ({
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
             className="mx-auto h-12 w-auto"
-            src="https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=zwQ45HywrMUAX9pSwkh&_nc_ht=scontent.fbog4-2.fna&oh=00_AfB5PzpKMLulKQGfB7_drU-1MPNDJAcgn6W1qQpOtBpYNA&oe=652B82D2"
+            src="https://scontent.fbog4-1.fna.fbcdn.net/v/t39.30808-6/299573120_390962279840498_6685377062908282532_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEfMlsfkEnF-am2ad-GZCmcr4zD9KSUWvyvjMP0pJRa_C4oKbpiRxdfRRiLZvQx4uTXiGku0Wh5ZpOX0pLDaLS1&_nc_ohc=dMXwkSN0X3sAX8cFGWA&_nc_ht=scontent.fbog4-1.fna&oh=00_AfDJFP5A1V0Zn0dslmNwZhKwrhEcwiO3ubHWq_9WFXkuAw&oe=65378BD5"
             alt="Logo Motospit"
           />
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Ingresa a tu cuenta</h2>
