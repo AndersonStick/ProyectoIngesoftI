@@ -6,6 +6,7 @@ import { activate } from "../../redux/actions/auth";
 import { Navigate } from "react-router";
 import { Circles } from  'react-loader-spinner';
 
+
 const Activate = ({
   activate, 
   loading

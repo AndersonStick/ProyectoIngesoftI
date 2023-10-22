@@ -1,9 +1,10 @@
-import Layout from '../../hocs/Layout'
-import { useState, useEffect } from 'react'
-import { connect } from 'react-redux'
-import { reset_password } from '../../redux/actions/auth'
-import { Circles } from  'react-loader-spinner'
-import { Navigate } from 'react-router'
+import Layout from '../../hocs/Layout';
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { reset_password } from '../../redux/actions/auth';
+import { Circles } from  'react-loader-spinner';
+import { Navigate } from 'react-router';
+
 
 const ResetPassword = ({
   reset_password,
