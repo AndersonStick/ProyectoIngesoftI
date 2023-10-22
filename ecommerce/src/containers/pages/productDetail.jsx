@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Layout from "../../hocs/Layout"
+import Layout from "../../hocs/Layout";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { 
@@ -15,9 +15,9 @@ import {
 } from "../../redux/actions/cart";
 
 import { useEffect, useState } from "react";
-import { HeartIcon } from '@heroicons/react/outline'
+import { HeartIcon } from '@heroicons/react/outline';
 import ImageGallery from "../../components/product/ImageGallery";
-import { Circles } from  'react-loader-spinner'
+import { Circles } from  'react-loader-spinner';
 
 
 const ProductDetail =({
@@ -69,7 +69,14 @@ const ProductDetail =({
 
             <div className="mt-3">
               <h2 className="sr-only">Información del producto</h2>
-              <p className="text-3xl text-gray-900">${product && product.price}</p>
+              <p className="mt-1 text-lg text-gray-900">
+                {product && product.price.toLocaleString('es-CO', {
+                  style: 'currency',
+                  currency: 'COP',
+                  minimumFractionDigits: 0, // Muestra solo el número entero
+                  maximumFractionDigits: 0 // Muestra solo el número entero
+                })}
+              </p>
             </div>
 
             <div className="mt-6">
