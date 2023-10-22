@@ -1,14 +1,15 @@
-import { Fragment, useState, useEffect } from 'react'
-import { Dialog, Disclosure, Transition } from '@headlessui/react'
-import { XIcon } from '@heroicons/react/outline'
-import { FilterIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/solid'
-import { connect } from 'react-redux'
-import {get_categories} from '../../redux/actions/categories'
-import {get_products, get_filtered_products} from '../../redux/actions/products'
-import ProductCard from '../../components/product/ProductCard'
-import { prices } from '../../helpers/fixedPrices'
-import Navbar from '../../components/navigation/navbar'
-import Footer from '../../components/navigation/footer'
+import { Fragment, useState, useEffect } from 'react';
+import { Dialog, Disclosure, Transition } from '@headlessui/react';
+import { XIcon } from '@heroicons/react/outline';
+import { FilterIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/solid';
+import { connect } from 'react-redux';
+import {get_categories} from '../../redux/actions/categories';
+import {get_products, get_filtered_products} from '../../redux/actions/products';
+import ProductCard from '../../components/product/ProductCard';
+import { prices } from '../../helpers/fixedPrices';
+import Navbar from '../../components/navigation/navbar';
+import Footer from '../../components/navigation/footer';
+
 
 const Search = ({
     get_categories,
