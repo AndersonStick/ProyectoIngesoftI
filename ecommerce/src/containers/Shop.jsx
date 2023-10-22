@@ -330,12 +330,10 @@ const Shop = ({
                       </button>
                     </div>
                   </div>
-
                   <section aria-labelledby="products-heading" className="pt-6 pb-24">
                     <h2 id="products-heading" className="sr-only">
                       Productos
                     </h2>
-
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
                       {/* Filters */}
                       <form onSubmit={e=>onSubmit(e)} className="hidden lg:block">
@@ -377,7 +375,6 @@ const Shop = ({
                                                 </label>
                                             </div>
                                         )
-
                                         category.sub_categories.map(sub_category => {
                                             result.push(
                                                 <div key={sub_category.id} className='flex items-center h-5 ml-2 my-5'>
@@ -394,13 +391,11 @@ const Shop = ({
                                                 </div>
                                             )
                                         })
-
                                         return result
                                     }
                                 })
                             }
                         </ul>
-
                         <Disclosure as="div" className="border-t border-gray-200 px-4 py-6">
                           {({ open }) => (
                             <>
@@ -451,14 +446,10 @@ const Shop = ({
                                   }
                                 </div>
                               </Disclosure.Panel>
-
-                              
-
                             </h3>
                             </>
                           )}
                           </Disclosure>
-
                           <Disclosure as="div" className="border-t border-gray-200 px-4 py-6">
                           {({ open }) => (
                             <>
@@ -489,7 +480,6 @@ const Shop = ({
                                           <option value='price'>Precio</option>
                                           <option value='sold'>Vendido</option>
                                           <option value='title'>Nombre</option>
-
                                         </select>
                                   </div>
                                   <div className='form-group'>
@@ -520,12 +510,10 @@ const Shop = ({
                             Buscar
                           </button>
                       </form>
-
                       {/* Product grid */}
                       <div className="lg:col-span-3">
                         {/* Replace with your content */}
                         {products && showProducts()}
-                        
                       </div>
                     </div>
                   </section>
