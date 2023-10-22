@@ -4,8 +4,7 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import { activate } from "../../redux/actions/auth";
 import { Navigate } from "react-router";
-
-import { Circles } from  'react-loader-spinner'
+import { Circles } from  'react-loader-spinner';
 
 const Activate = ({
   activate, 
@@ -34,7 +33,6 @@ const Activate = ({
         </h1>
     </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
           <div className="max-w-3xl mx-auto">
             {loading ? 
             <button
