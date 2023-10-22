@@ -196,7 +196,6 @@ const Search = ({
                                                 </div>
                                             )
                                         })
-
                                         return result
                                     }
                                 })
