@@ -10,7 +10,6 @@ import { Link } from "react-router-dom"
               Ver todos los favoritos<span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
-  
           <div className="mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-y-0 sm:gap-x-6 lg:gap-x-8">
             {data && 
             data !== null &&
@@ -30,7 +29,14 @@ import { Link } from "react-router-dom"
                     {product.name}
                   </Link>
                 </h3>
-                <p className="mt-1 text-sm text-gray-900">${product.price}</p>
+                <p className="mt-1 text-sm text-gray-900">
+                {product.price.toLocaleString('es-CO', {
+                  style: 'currency',
+                  currency: 'COP',
+                  minimumFractionDigits: 0, // Muestra solo el número entero
+                  maximumFractionDigits: 0 // Muestra solo el número entero
+                })}
+                </p>
               </div>
             ))}
           </div>

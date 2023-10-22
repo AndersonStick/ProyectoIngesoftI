@@ -26,12 +26,14 @@ export default function ProductsArrival({
                     {product.name}
                   </Link>
                 </h3>
-                  <p className="mt-1 text-sm text-gray-900">
-                  {product.price.toLocaleString('es-CO', {
-                    style: 'currency',
-                    currency: 'COP'
-                  })}
-                  </p>
+                <p className="mt-1 text-sm text-gray-900">
+                {product.price.toLocaleString('es-CO', {
+                  style: 'currency',
+                  currency: 'COP',
+                  minimumFractionDigits: 0, // Muestra solo el número entero
+                  maximumFractionDigits: 0 // Muestra solo el número entero
+                })}
+                </p>
               </div>
             ))}
           </div>
