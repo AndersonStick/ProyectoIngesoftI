@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { XIcon, CheckIcon, ClockIcon } from "@heroicons/react/solid";
 import { useEffect } from "react";
+
+
 const CartItem = ({
     item,
     count,
@@ -30,9 +32,8 @@ const CartItem = ({
             try {
                 if (item.product.quantity >= item_count) {
                     await update_item(item, item_count);
-                }
-                else {
-                    setAlert('No hay unidades disponibles', 'red');
+                } else {
+                    setAlert('No hay unidades disponibles', 'bg-red-100');
                 }
                 setRender(!render);
             } catch(err) {

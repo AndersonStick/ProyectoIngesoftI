@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { connect } from "react-redux";
 
-import { CheckCircleIcon } from '@heroicons/react/solid'
+import { CheckCircleIcon } from '@heroicons/react/solid';
 
 function Alert ({ alert }) {
 

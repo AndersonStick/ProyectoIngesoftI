@@ -128,7 +128,6 @@ const Cart = ({
                 </Link>
                 </>
             )
-           
         }
     }
 
@@ -136,18 +135,16 @@ const Cart = ({
         <Layout>
             <div className="bg-white">
                 <div className="max-w-2xl mx-auto pt-16 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Carrito con ({total_items}) elementos</h1>
+                    <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Carrito con ({total_items}) productos</h1>
                     <div className="mt-12 lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-start xl:gap-x-16">
                     <section aria-labelledby="cart-heading" className="lg:col-span-7">
                         <h2 id="cart-heading" className="sr-only">
-                        Elementos en tu carrito
+                        Productos en tu carrito
                         </h2>
-
                         <ul className="border-t border-b border-gray-200 divide-y divide-gray-200">
                         {showItems()}
                         </ul>
                     </section>
-
                     {/* Order summary */}
                     <section
                         aria-labelledby="summary-heading"
