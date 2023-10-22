@@ -131,7 +131,7 @@ const Shop = ({
                             className="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400"
                             onClick={() => setMobileFiltersOpen(false)}
                           >
-                            <span className="sr-only">Close menu</span>
+                            <span className="sr-only">Cerrar el menu</span>
                             <XIcon className="h-6 w-6" aria-hidden="true" />
                           </button>
                         </div>
@@ -142,7 +142,6 @@ const Shop = ({
                           <ul className="font-medium text-gray-900 px-2 py-3">
                           {
                                 categories &&
-                                
                                 categories.map(category => {
                                     if (category.sub_categories.length === 0){
                                         return(
@@ -175,7 +174,6 @@ const Shop = ({
                                                 </label>
                                             </div>
                                         )
-
                                         category.sub_categories.map(sub_category => {
                                             result.push(
                                                 <div key={sub_category.id} className='flex items-center h-5 ml-2 my-5'>
@@ -197,8 +195,6 @@ const Shop = ({
                                 })
                             }
                           </ul>
-
-                          
                           <Disclosure as="div" className="border-t border-gray-200 px-4 py-6">
                           {({ open }) => (
                             <>
