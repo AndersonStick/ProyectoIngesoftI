@@ -30,7 +30,7 @@ const ProductDetail =({
     get_item_total
 })=>{
 
-  const [loading, setLoading] =useState(false);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
