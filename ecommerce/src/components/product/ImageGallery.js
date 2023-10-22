@@ -1,4 +1,4 @@
-import { Tab } from '@headlessui/react'
+import { Tab } from '@headlessui/react';
 
 
 const product = {
@@ -47,14 +47,10 @@ const ImageGallery=({photo})=>{
 
     return(
         <>
-            {/* Image gallery */}
           <Tab.Group as="div" className="flex flex-col-reverse">
-            {/* Image selector */}
             <div className="hidden mt-6 w-full max-w-2xl mx-auto sm:block lg:max-w-none">
               <Tab.List className="grid grid-cols-4 gap-6">
-                
                   <Tab
-                    
                     className="relative h-24 bg-white rounded-md flex items-center justify-center text-sm font-medium uppercase text-gray-900 cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-opacity-50"
                   >
                     {({ selected }) => (
@@ -72,10 +68,8 @@ const ImageGallery=({photo})=>{
                       </>
                     )}
                   </Tab>
-                
               </Tab.List>
             </div>
-
             <Tab.Panels className="w-full aspect-w-1 aspect-h-1">
               {product && product !== null && product.images.map((image) => (
                 <Tab.Panel key={image.id}>
