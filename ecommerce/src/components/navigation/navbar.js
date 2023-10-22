@@ -21,7 +21,7 @@ function classNames(...classes) {
 
 function Navbar({
   isAuthenticated,
-  user,
+  // user,
   logout,
   get_categories,
   categories,
@@ -101,8 +101,6 @@ function Navbar({
                 </Link>
               )}
             </Menu.Item>
-            
-            
             <form method="POST" action="#">
               <Menu.Item>
                 {({ active }) => (
@@ -156,11 +154,11 @@ function Navbar({
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Link to="/cart" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-custom-blue">
-              <span className="sr-only">Open menu</span>
+              <span className="sr-only">Abrir menu</span>
               <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
             </Link>
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-custom-blue">
-              <span className="sr-only">Open menu</span>
+              <span className="sr-only">Abrir menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
@@ -170,14 +168,16 @@ function Navbar({
               <NavLink to="/shop" className="mt-2 text-base font-medium text-gray-500 hover:text-gray-900">
                 Catálogo
               </NavLink>
-
-              {window.location.pathname==='/search'?<></>:<SearchBox 
-              search={search}
-              onChange={onChange}
-              onSubmit={onSubmit}
-              categories={categories}
-              />}
-
+              {
+              window.location.pathname==='/search'?
+              <></>:
+              <SearchBox 
+                search={search}
+                onChange={onChange}
+                onSubmit={onSubmit}
+                categories={categories}
+              />
+              }
             </Popover.Group>
             <div className="flex items-center md:ml-12">
               <Link to="/cart">
@@ -191,7 +191,6 @@ function Navbar({
           </div>
         </div>
       </div>
-
       <Transition
         as={Fragment}
         enter="duration-200 ease-out"
