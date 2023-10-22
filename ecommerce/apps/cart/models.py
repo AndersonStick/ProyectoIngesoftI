@@ -1,5 +1,4 @@
 from django.db import models
-from django.db import models
 from apps.product.models import Product
 from django.conf import settings
 User = settings.AUTH_USER_MODEL
