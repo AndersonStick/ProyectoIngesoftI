@@ -69,7 +69,7 @@ const ProductDetail =({
 
             <div className="mt-3">
               <h2 className="sr-only">Información del producto</h2>
-              <p className="mt-1 text-lg text-gray-900">
+              <p className="mt-1 text-4xl text-gray-900">
                 {product && product.price.toLocaleString('es-CO', {
                   style: 'currency',
                   currency: 'COP',
