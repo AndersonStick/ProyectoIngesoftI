@@ -5,7 +5,7 @@ export default function Example() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
               <div className="sm:max-w-lg">
                 <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-                ¡No te asustes por los precios, son los más bajos del año! 💀👻
+                ¡Diciembre en Noviembre: Descuentos Moto Divertidos! 🏍️🎉
                 </h1>
                 <p className="mt-4 text-xl text-gray-500">
                 ¡Desde ya se siente diciembre! Prepara tu moto para las festividades con descuentos en repuestos y accesorios solo en MotoSpits. Calidad garantizada, envío rápido y asesoramiento experto te esperan. ¡Mantén tu moto en su mejor forma y prepárate para unas navidades llenas de emociones! 🏍️💨🎄

@@ -26,7 +26,12 @@ export default function ProductsArrival({
                     {product.name}
                   </Link>
                 </h3>
-                <p className="mt-1 text-sm text-gray-900">${product.price}</p>
+                  <p className="mt-1 text-sm text-gray-900">
+                  {product.price.toLocaleString('es-CO', {
+                    style: 'currency',
+                    currency: 'COP'
+                  })}
+                  </p>
               </div>
             ))}
           </div>
