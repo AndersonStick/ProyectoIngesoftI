@@ -69,8 +69,14 @@ const CartItem = ({
                     </Link>
                     </h3>
                 </div>
-                
-                <p className="mt-1 text-sm font-medium text-gray-900">$ {item.product.price}</p>
+                    <p className="mt-1 text-xl font-medium text-gray-900">
+                        {item.product.price.toLocaleString('es-CO', {
+                            style: 'currency',
+                            currency: 'COP',
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0
+                        })}
+                    </p>
                 </div>
 
                 <div className="mt-4 sm:mt-0 sm:pr-9">
@@ -96,7 +102,6 @@ const CartItem = ({
                         <span className="mx-2">Actualizar</span>
                     </button>
                 </form>
-
                 <div className="absolute top-0 right-0">
                     <button 
                     onClick={removeItemHandler}
@@ -132,4 +137,5 @@ const CartItem = ({
         </li>
     )
 }
+
 export default CartItem
