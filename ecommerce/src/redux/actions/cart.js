@@ -152,8 +152,8 @@ export const get_total = () => async dispatch => {
             });
         }
     } else {
-        let total = 0.0;
-        let compare_total = 0.0;
+        let total = 0;
+        let compare_total = 0;
         let cart = [];
 
         if (localStorage.getItem('cart')) {
@@ -167,10 +167,11 @@ export const get_total = () => async dispatch => {
 
         dispatch({
             type: GET_TOTAL,
-            payload: [parseFloat(total.toFixed(3)), parseFloat(compare_total.toFixed(3))]
+            payload: [total, compare_total]
         });
     }
 }
+
 
 export const get_item_total = () => async dispatch => {
     if (localStorage.getItem('access')) {
