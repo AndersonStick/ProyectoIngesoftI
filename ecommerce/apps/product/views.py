@@ -90,7 +90,7 @@ class ListSearchView(APIView):
 
         search = data['search']
 
-        # Chequear si algo input ocurrio en la busqueda
+        # Chequear si algun input ocurrio en la busqueda
         if len(search) == 0:
             # mostrar todos los productos si no hay input en la busqueda
             search_results = Product.objects.order_by('-date_created').all()
@@ -115,7 +115,7 @@ class ListSearchView(APIView):
 
         category = Category.objects.get(id=category_id)
 
-        # si la categoria tiene padre, fitlrar solo por la categoria y no el padre tambien
+        # si la categoria tiene padre, filtrar solo por la sub-categoria y no el padre tambien
         if category.parent:
             search_results = search_results.order_by(
                 '-date_created'
@@ -272,7 +272,7 @@ class ListBySearchView(APIView):
         elif price_range == '60000 - 99000':
             product_results = product_results.filter(price__gte=60000)
             product_results = product_results.filter(price__lt=100000)
-        elif price_range == 'More than 100000':
+        elif price_range == 'Más de 100000':
             product_results = product_results.filter(price__gte=100000)
         
         #Filtrar producto por sort_by
