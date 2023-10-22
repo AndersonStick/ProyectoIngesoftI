@@ -1,13 +1,13 @@
-import Layout from "../hocs/Layout"
+import Layout from "../hocs/Layout";
 import { connect } from 'react-redux';
 import { 
     get_products_by_arrival, 
     get_products_by_sold 
 } from '../redux/actions/products';
 import { useEffect } from "react";
-import Banner from '../components/home/Banner'
-import ProductsArrival from '../components/home/ProductsArrival'
-import ProductsSold from '../components/home/ProductsSold'
+import Banner from '../components/home/Banner';
+import ProductsArrival from '../components/home/ProductsArrival';
+import ProductsSold from '../components/home/ProductsSold';
 
 const Home = ({
     get_products_by_arrival, 
