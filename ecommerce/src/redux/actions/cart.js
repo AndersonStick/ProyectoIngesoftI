@@ -23,7 +23,8 @@ import {
     EMPTY_CART_FAIL,
     SYNCH_CART_SUCCESS,
     SYNCH_CART_FAIL,
-} from './types'
+} from './types';
+
 
 export const add_item = product => async dispatch =>{
     if (localStorage.getItem('access')) {
