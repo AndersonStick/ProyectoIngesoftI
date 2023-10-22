@@ -24,10 +24,11 @@ import {
     SYNCH_CART_FAIL,
 } from '../actions/types';
 
+
 const initialState = {
     items: null,
-    amount: 0.000,
-    compare_amount: 0.000,
+    amount: 0,
+    compare_amount: 0,
     total_items: 0
 };
 
