@@ -158,7 +158,14 @@ const Cart = ({
 
                         <div className="flex items-center justify-between">
                             <dt className="text-sm text-gray-600">Subtotal</dt>
-                            <dd className="text-sm font-medium text-gray-900">${compare_amount}</dd>
+                            <dd className="text-sm font-medium text-gray-900">
+                                {compare_amount.toLocaleString('es-CO', {
+                                    style: 'currency',
+                                    currency: 'COP',
+                                    minimumFractionDigits: 0,
+                                    maximumFractionDigits: 0
+                                })}
+                            </dd>
                         </div>
 
                         <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
@@ -169,7 +176,7 @@ const Cart = ({
                                 <QuestionMarkCircleIcon className="h-5 w-5" aria-hidden="true" />
                             </a>
                             </dt>
-                            <dd className="text-sm font-medium text-gray-900">$5.00</dd>
+                            <dd className="text-sm font-medium text-gray-900">$0</dd>
                         </div>
 
                         <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
@@ -180,12 +187,19 @@ const Cart = ({
                                 <QuestionMarkCircleIcon className="h-5 w-5" aria-hidden="true" />
                             </a>
                             </dt>
-                            <dd className="text-sm font-medium text-gray-900">$8.32</dd>
+                            <dd className="text-sm font-medium text-gray-900">$0</dd>
                         </div>
 
                         <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
                             <dt className="text-base font-medium text-gray-900">Total</dt>
-                            <dd className="text-base font-medium text-gray-900">${amount}</dd>
+                            <dd className="text-base font-medium text-gray-900">
+                                {amount.toLocaleString('es-CO', {
+                                    style: 'currency',
+                                    currency: 'COP',
+                                    minimumFractionDigits: 0,
+                                    maximumFractionDigits: 0
+                                })}
+                            </dd>
                         </div>
                         </dl>
 
