@@ -3,14 +3,14 @@ export default function Example() {
       <div className="relative bg-white overflow-hidden">
         <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
-            <div className="sm:max-w-lg">
-              <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-              ¡No te asustes por los precios, son los más bajos del año! 💀👻
-              </h1>
-              <p className="mt-4 text-xl text-gray-500">
-              Compra ahora y prepara tu moto para una noche llena de emociones. ¡No dejes que los fantasmas te alcancen, aprovecha estas ofertas espeluznantes hoy mismo! 🦇✨ #HalloweenEnMoto 🕷️🕸️
-              </p>
-            </div>
+              <div className="sm:max-w-lg">
+                <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
+                ¡No te asustes por los precios, son los más bajos del año! 💀👻
+                </h1>
+                <p className="mt-4 text-xl text-gray-500">
+                Compra ahora y prepara tu moto para una noche llena de emociones. ¡No dejes que los fantasmas te alcancen, aprovecha estas ofertas espeluznantes hoy mismo! 🦇✨ #HalloweenEnMoto 🕷️🕸️
+                </p>
+              </div>
             <div>
               <div className="mt-10">
                 {/* Decorative image grid */}
@@ -24,14 +24,14 @@ export default function Example() {
                         <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                           <img
                             src="https://http2.mlstatic.com/D_NQ_NP_2X_973822-MLU71580227898_092023-F.webp"
-                            alt=""
+                            alt="Aceite Repsol"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
                             src="https://http2.mlstatic.com/D_NQ_NP_2X_623521-MCO47951280532_102021-F.webp"
-                            alt=""
+                            alt="Barras de suspension"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
@@ -40,21 +40,21 @@ export default function Example() {
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
                             src="https://http2.mlstatic.com/D_NQ_NP_2X_940521-MCO71635109274_092023-F.webp"
-                            alt=""
+                            alt="Bujias"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
                             src="https://http2.mlstatic.com/D_NQ_NP_2X_868241-MCO44358226567_122020-F.webp"
-                            alt=""
+                            alt="Kit de arrastre cassarella"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
                             src="https://http2.mlstatic.com/D_NQ_NP_2X_747210-MCO44172916376_112020-F.webp"
-                            alt=""
+                            alt="Kit delantero nkd"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
@@ -63,14 +63,14 @@ export default function Example() {
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
                             src="https://http2.mlstatic.com/D_NQ_NP_2X_672877-MLU70794469184_082023-F.webp"
-                            alt=""
+                            alt="Llantas Diablo Rosso III"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
                             src="https://http2.mlstatic.com/D_NQ_NP_2X_653472-MCO50825449659_072022-F.webp"
-                            alt=""
+                            alt="Farola NS 200"
                             className="w-full h-full object-center object-cover"
                           />
                         </div>
@@ -78,7 +78,6 @@ export default function Example() {
                     </div>
                   </div>
                 </div>
-  
                 <a
                   href="/shop"
                   className="inline-block text-center bg-custom-blue border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-custom-hover-blue"
