@@ -35,6 +35,7 @@ class GetItemsView(APIView):
                 {'error': 'Something went wrong when retrieving cart items'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
 class AddItemView(APIView):
     def post(self, request, format=None):
         user = self.request.user
@@ -111,8 +112,8 @@ class GetTotalView(APIView):
             cart = Cart.objects.get(user=user)
             cart_items = CartItem.objects.filter(cart=cart)
 
-            total_cost = 0.0
-            total_compare_cost = 0.0
+            total_cost = 0
+            total_compare_cost = 0
 
             if cart_items.exists():
                 for cart_item in cart_items:
@@ -120,8 +121,8 @@ class GetTotalView(APIView):
                                    * float(cart_item.count))
                     total_compare_cost += (float(cart_item.product.compare_price)
                                            * float(cart_item.count))
-                total_cost = round(total_cost, 3)       # Decimales
-                total_compare_cost = round(total_compare_cost, 3)       # Decimales
+                # total_cost = round(total_cost, 3)       # Decimales
+                # total_compare_cost = round(total_compare_cost, 3)       # Decimales
             return Response(
                 {'total_cost': total_cost, 'total_compare_cost': total_compare_cost},
                 status=status.HTTP_200_OK)
