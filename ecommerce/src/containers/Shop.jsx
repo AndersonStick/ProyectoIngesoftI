@@ -1,13 +1,13 @@
-import Layout from '../hocs/Layout'
-import { Fragment, useEffect, useState } from 'react'
-import { Dialog, Disclosure, Transition } from '@headlessui/react'
-import { XIcon } from '@heroicons/react/outline'
-import { FilterIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/solid'
-import { connect } from 'react-redux'
-import { get_categories } from '../redux/actions/categories'
-import { get_products, get_filtered_products } from '../redux/actions/products'
-import ProductCard from '../components/product/ProductCard'
-import { prices } from '../helpers/fixedPrices'
+import Layout from '../hocs/Layout';
+import { Fragment, useEffect, useState } from 'react';
+import { Dialog, Disclosure, Transition } from '@headlessui/react';
+import { XIcon } from '@heroicons/react/outline';
+import { FilterIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/solid';
+import { connect } from 'react-redux';
+import { get_categories } from '../redux/actions/categories';
+import { get_products, get_filtered_products } from '../redux/actions/products';
+import ProductCard from '../components/product/ProductCard';
+import { prices } from '../helpers/fixedPrices';
 
 const Shop = ({
     get_categories,
@@ -61,7 +61,6 @@ const Shop = ({
             return display.push(
                 <div key={index}>
                     <ProductCard product={product}/>
-                    {/* Producto filtrado */}
                 </div>
             );
         });
@@ -75,7 +74,6 @@ const Shop = ({
             return display.push(
                 <div key={index}>
                     <ProductCard product={product}/>
-                    {/* Productos */}
                 </div>
             );
         });
@@ -245,13 +243,10 @@ const Shop = ({
                                   }
                                 </div>
                               </Disclosure.Panel>
-
-
                             </h3>
                             </>
                           )}
                           </Disclosure>
-
                           <Disclosure as="div" className="border-t border-gray-200 px-4 py-6">
                           {({ open }) => (
                             <>
@@ -455,7 +450,7 @@ const Shop = ({
                             <>
                             <h3 className="-mx-2 -my-3 flow-root">
                               <Disclosure.Button className="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500">
-                                <span className="font-sofiapro-regular text-gray-900">Mas Filtros</span>
+                                <span className="font-sofiapro-regular text-gray-900">Más Filtros</span>
                                 <span className="ml-6 flex items-center">
                                   {open ? (
                                     <MinusSmIcon className="h-5 w-5" aria-hidden="true" />
@@ -502,7 +497,6 @@ const Shop = ({
                             </>
                           )}
                           </Disclosure>
-
                           <button
                             type="submit"
                             className="float-right inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-custom-blue hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-blue"
