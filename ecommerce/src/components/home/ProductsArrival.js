@@ -6,8 +6,7 @@ export default function ProductsArrival({
     return (
       <div className="bg-white">
         <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">Lo más reciente</h2>
-  
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">Los más recientes</h2>
           <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             { data &&
             data !== null &&
@@ -17,7 +16,7 @@ export default function ProductsArrival({
                 <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                   <img
                     src={product.photo}
-                    alt=""
+                    alt="Foto del producto"
                     className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                   />
                 </div>

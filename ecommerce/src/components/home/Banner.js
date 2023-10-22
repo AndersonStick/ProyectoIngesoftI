@@ -8,7 +8,7 @@ export default function Example() {
                 ¡No te asustes por los precios, son los más bajos del año! 💀👻
                 </h1>
                 <p className="mt-4 text-xl text-gray-500">
-                Compra ahora y prepara tu moto para una noche llena de emociones. ¡No dejes que los fantasmas te alcancen, aprovecha estas ofertas espeluznantes hoy mismo! 🦇✨ #HalloweenEnMoto 🕷️🕸️
+                ¡Desde ya se siente diciembre! Prepara tu moto para las festividades con descuentos en repuestos y accesorios solo en MotoSpits. Calidad garantizada, envío rápido y asesoramiento experto te esperan. ¡Mantén tu moto en su mejor forma y prepárate para unas navidades llenas de emociones! 🏍️💨🎄
                 </p>
               </div>
             <div>
