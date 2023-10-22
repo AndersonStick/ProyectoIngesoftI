@@ -69,7 +69,14 @@ const ProductDetail =({
 
             <div className="mt-3">
               <h2 className="sr-only">Información del producto</h2>
-              <p className="text-3xl text-gray-900">${product && product.price}</p>
+              <p className="mt-1 text-sm text-gray-900">
+                {product.price.toLocaleString('es-CO', {
+                  style: 'currency',
+                  currency: 'COP',
+                  minimumFractionDigits: 0, // Muestra solo el número entero
+                  maximumFractionDigits: 0 // Muestra solo el número entero
+                })}
+                </p>
             </div>
 
             <div className="mt-6">
