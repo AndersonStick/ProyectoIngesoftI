@@ -1,0 +1,5 @@
+Manejamos una arquitectura de MVC(Modelo Vista Controllador)
+
+Base de datos: PostgreSQL
+Backend: Django 
+Frontend: React
