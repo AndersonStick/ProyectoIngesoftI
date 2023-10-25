@@ -1,8 +1,9 @@
-import Layout from '../../hocs/Layout'
-import { connect } from 'react-redux'
+import Layout from '../../hocs/Layout';
+import { connect } from 'react-redux';
 import { Navigate } from 'react-router';
 import { reset } from '../../redux/actions/payment';
 import { useEffect } from 'react';
+
 
 const ThankYou = ({
     isAuthenticated,
@@ -26,7 +27,7 @@ const ThankYou = ({
                         Gracias
                     </p>
                     <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-                        Esperamos que hayas tenido una buena experiencia en Motospit Ecommerce
+                        Esperamos que te hayas divertido comprando en Motospit Ecommerce
                     </p>
                     </div>
                 </div>
