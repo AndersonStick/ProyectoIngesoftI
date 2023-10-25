@@ -1,13 +1,12 @@
-import Layout from "../../hocs/Layout"
-import { Navigate } from "react-router-dom"
-import { connect } from 'react-redux'
+import Layout from "../../hocs/Layout";
+import { Navigate } from "react-router-dom";
+import { connect } from 'react-redux';
 import CartItem from "../../components/cart/CartItem";
 import { setAlert } from "../../redux/actions/alert";
-
 import { update_item, remove_item } from "../../redux/actions/cart";
 import { useEffect, useState } from "react";
+import { get_shipping_options } from '../../redux/actions/shipping';
 
-import { get_shipping_options } from '../../redux/actions/shipping'
 
 const Checkout = ({
     isAuthenticated, 
@@ -22,13 +21,13 @@ const Checkout = ({
     const [formData, setFormData] = useState({
         full_name: '',
         address_line_1: '',
-        address_line_2: '',
+        // address_line_2: '',
         city: '',
-        state_province_region: '',
-        postal_zip_code: '',
+        // state_province_region: '',
+        // postal_zip_code: '',
         country_region: 'Colombia',
         telephone_number: '',
-        coupon_name: '',
+        // coupon_name: '',
         shipping_id: 0,
     });
 
@@ -39,13 +38,13 @@ const Checkout = ({
     const { 
         full_name,
         address_line_1,
-        address_line_2,
+        // address_line_2,
         city,
-        state_province_region,
-        postal_zip_code,
+        // state_province_region,
+        // postal_zip_code,
         country_region,
         telephone_number,
-        coupon_name,
+        // coupon_name,
         shipping_id,
     } = formData;
 
@@ -127,12 +126,10 @@ const Checkout = ({
                         <h2 id="cart-heading" className="sr-only">
                             Elementos en tu carrito
                         </h2>
-
                         <ul className="border-t border-b border-gray-200 divide-y divide-gray-200">
                         {showItems()}
                         </ul>
                     </section>
-
                     {/* Order summary */}
 
                     {/* <ShippingForm
@@ -160,8 +157,6 @@ const Checkout = ({
                         // apply_coupon={apply_coupon}
                         // coupon_name={coupon_name}
                         /> */}
-
-                    
                     </div>
                 </div>
                 </div>
@@ -173,8 +168,8 @@ const mapStateToProps = state => ({
     isAuthenticated: state.Auth.isAuthenticated,
     // user: state.Auth.user,
     items: state.Cart.items,
-    total_items: state.Cart.total_items,
-    shipping: state.Shipping.shipping,
+    // total_items: state.Cart.total_items,
+    shipping: state.Shipping.shipping
 })
 
 export default connect(mapStateToProps,{

@@ -111,7 +111,6 @@ const CartItem = ({
                 </div>
                 </div>
             </div>
-
             <p className="mt-4 flex text-sm text-gray-700 space-x-2">
                 {     
                     item.product && 

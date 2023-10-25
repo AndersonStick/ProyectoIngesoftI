@@ -46,8 +46,6 @@ function App() {
           <Route exact path="/search" element={<Search/>}/>
           <Route exact path="/thankyou" element={<ThankYou/>}/>
 
-
-
         </Routes>
       </Router>
     </Provider>
