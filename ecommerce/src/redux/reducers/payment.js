@@ -14,11 +14,11 @@ import {
 const initialState = {
     clientToken: null,
     made_payment: false,
-    original_price: 0.01,       //Cambiar precios, es solo prueba
-    total_amount: 0.02,
-    total_compare_amount: 0.03,
-    estimated_tax: 0.04,
-    shipping_cost: 0.05,
+    original_price: 0,       
+    total_amount: 0,
+    total_compare_amount: 0,
+    estimated_tax: 0,
+    shipping_cost: 0,
     loading: false
 };
 
@@ -38,11 +38,11 @@ export default function Payment(state = initialState, action) {
         case GET_PAYMENT_TOTAL_FAIL:
             return {
                 ...state,
-                original_price: 0.00,
-                total_amount: 0.00,
-                total_compare_amount: 0.00,
-                estimated_tax: 0.00,
-                shipping_cost: 0.00
+                original_price: 0,
+                total_amount: 0,
+                total_compare_amount: 0,
+                estimated_tax: 0,
+                shipping_cost: 0
             }
         case LOAD_BT_TOKEN_SUCCESS:
             return {

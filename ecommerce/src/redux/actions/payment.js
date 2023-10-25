@@ -73,13 +73,9 @@ export const get_client_token = () => async dispatch => {
 export const process_payment = (
     nonce,
     shipping_id,
-    coupon_name,
     full_name,
     address_line_1,
-    address_line_2,
     city,
-    state_province_region,
-    postal_zip_code,
     country_region,
     telephone_number
 ) => async dispatch => {
@@ -94,14 +90,10 @@ export const process_payment = (
     const body = JSON.stringify({
         nonce,
         shipping_id,
-        coupon_name,
         full_name,
         address_line_1,
-        address_line_2,
         city,
         state_province_region,
-        postal_zip_code,
-        country_region,
         telephone_number
     });
 
@@ -115,19 +107,19 @@ export const process_payment = (
             dispatch({
                 type: PAYMENT_SUCCESS
             });
-            dispatch(setAlert(res.data.success, 'green'));
+            dispatch(setAlert(res.data.success, 'bg-green-100'));
             dispatch(get_item_total());
         } else {
             dispatch({
                 type: PAYMENT_FAIL
             });
-            dispatch(setAlert(res.data.error, 'red'));
+            dispatch(setAlert(res.data.error, 'bg-red-100'));
         }
     } catch(err) {
         dispatch({
             type: PAYMENT_FAIL
         });
-        dispatch(setAlert('Error processing payment', 'red'));
+        dispatch(setAlert('Error processing payment', 'bg-red-100'));
     }
 
     dispatch({
