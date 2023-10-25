@@ -3,6 +3,7 @@ import {
     GET_SHIPPING_OPTIONS_FAIL
 } from '../actions/types';
 
+
 const initialState = {
     shipping: null,
 };
