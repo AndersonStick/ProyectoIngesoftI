@@ -93,7 +93,7 @@ export const process_payment = (
         full_name,
         address_line_1,
         city,
-        state_province_region,
+        // state_province_region,
         telephone_number
     });
 

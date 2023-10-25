@@ -227,6 +227,9 @@ const Checkout = ({
             }
           }
 
+          if (made_payment)
+            return <Navigate to='/thankyou' />;
+
     return(
         <Layout>
             <div className="bg-white">
