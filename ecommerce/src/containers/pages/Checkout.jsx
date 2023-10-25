@@ -154,13 +154,13 @@ const Checkout = ({
               if (!isAuthenticated) {
                   <Link
                     to="/login"
-                    className="w-full bg-gray-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-500"
+                    className="w-full bg-custom-blue border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-custom-blue focus:ring-custom-blue"
                   >
                     Iniciar Sesión
                   </Link>
               } else {
                 <button
-                  className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                  className="w-full bg-custom-blue border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue"
                 >
                   <Circles
                   height="15"
@@ -187,7 +187,7 @@ const Checkout = ({
                   />
                   <div className="mt-6">
                     {loading?<button
-                      className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                      className="w-full bg-custom-blue border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue"
                     >
                       <Circles
                         height="15"
@@ -201,9 +201,9 @@ const Checkout = ({
                     </button>:
                     <button
                     type="submit"
-                    className="w-full bg-green-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-green-500"
+                    className="w-full bg-custom-blue border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue"
                   >
-                    Place Order
+                    Comprar
                   </button>}
                   </div>
                 </>
@@ -246,7 +246,7 @@ const Checkout = ({
                         shipping_cost={shipping_cost}
                         shipping_id={shipping_id}
                         shipping={shipping}
-                        // renderPaymentInfo={renderPaymentInfo}
+                        renderPaymentInfo={renderPaymentInfo}
                         />
                     </div>
                 </div>

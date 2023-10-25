@@ -18,7 +18,8 @@ const ShippingForm = ({
     estimated_tax,
     shipping_cost,
     shipping_id,
-    shipping
+    shipping,
+    renderPaymentInfo
 }) => {
     return (
         <section
@@ -180,7 +181,7 @@ const ShippingForm = ({
                 </div>
 
                 
-            {/* {renderPaymentInfo()} */}
+            {renderPaymentInfo()}
 
             </form>
           </section>
