@@ -19,7 +19,7 @@ class ListOrdersView(APIView):
                 item['shipping_price'] = order.shipping_price
                 item['date_issued'] = order.date_issued
                 item['address_line_1'] = order.address_line_1
-                item['address_line_2'] = order.address_line_2
+                # item['address_line_2'] = order.address_line_2
 
                 result.append(item)
             
@@ -47,10 +47,10 @@ class ListOrderDetailView(APIView):
                 result['amount'] = order.amount
                 result['full_name'] = order.full_name
                 result['address_line_1'] = order.address_line_1
-                result['address_line_2'] = order.address_line_2
+                # result['address_line_2'] = order.address_line_2
                 result['city'] = order.city
-                result['state_province_region'] = order.state_province_region
-                result['postal_zip_code'] = order.postal_zip_code
+                # result['state_province_region'] = order.state_province_region
+                # result['postal_zip_code'] = order.postal_zip_code
                 result['country_region'] = order.country_region
                 result['telephone_number'] = order.telephone_number
                 result['shipping_name'] = order.shipping_name

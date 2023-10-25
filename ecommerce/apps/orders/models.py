@@ -17,18 +17,18 @@ class Order(models.Model):
     status = models.CharField(max_length=50, choices=OrderStatus.choices, default=OrderStatus.not_processed)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     transaction_id = models.CharField(max_length=255, unique=True)
-    amount = models.DecimalField(max_digits=6, decimal_places=2)    ##Cambiar
+    amount = models.IntegerField()
     full_name = models.CharField(max_length=255)
     address_line_1 = models.CharField(max_length=255)
-    address_line_2 = models.CharField(max_length=255, blank=True)
+    # address_line_2 = models.CharField(max_length=255, blank=True)
     city = models.CharField(max_length=255)
-    state_province_region = models.CharField(max_length=255)
-    postal_zip_code = models.CharField(max_length=20)
+    # state_province_region = models.CharField(max_length=255)
+    # postal_zip_code = models.CharField(max_length=20)
     country_region = models.CharField(max_length=255, choices=Countries.choices, default=Countries.Colombia)
     telephone_number = models.CharField(max_length=255)
     shipping_name = models.CharField(max_length=255)
     shipping_time = models.CharField(max_length=255)
-    shipping_price = models.DecimalField(max_digits=5, decimal_places=2)    ##Cambiar
+    shipping_price = models.IntegerField()
     date_issued = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
@@ -39,7 +39,7 @@ class OrderItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=5, decimal_places=2)     ## Cambiar
+    price = models.IntegerField()
     count = models.IntegerField()
     date_added = models.DateTimeField(default=datetime.now)
 
