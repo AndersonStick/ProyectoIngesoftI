@@ -48,7 +48,7 @@ class GetPaymentTotalView(APIView):
         try:
             cart = Cart.objects.get(user=user)
 
-            #revisar si existen iitems
+            #revisar si existen items
             if not CartItem.objects.filter(cart=cart).exists():
                 return Response(
                     {'error': 'Need to have items in cart'},
@@ -69,8 +69,8 @@ class GetPaymentTotalView(APIView):
                         status=status.HTTP_200_OK
                     )
                 
-                total_amount = 0.0
-                total_compare_amount = 0.0
+                total_amount = 0
+                total_compare_amount = 0
 
                 for cart_item in cart_items:
                     total_amount += (float(cart_item.product.price)
@@ -81,14 +81,12 @@ class GetPaymentTotalView(APIView):
                 # total_compare_amount = total_compare_amount
                 original_price = total_amount
 
-                
-
                 # Impuesto estimado
                 estimated_tax = round(total_amount * tax, 2)
 
                 total_amount += (total_amount * tax)
 
-                shipping_cost = 0.0
+                shipping_cost = 0
                 # verificar que el envio sea valido
                 if Shipping.objects.filter(id__iexact=shipping_id).exists():
                     # agregar shipping a total amount
@@ -97,7 +95,7 @@ class GetPaymentTotalView(APIView):
                     total_amount += float(shipping_cost)
                 
 
-                # total_amount = round(total_amount, 2)
+                total_amount = round(total_amount, 0)   # Cambiar si falla a 2 (10:47:00)
 
                 return Response({
                     'original_price': f'{original_price:.2f}',
@@ -121,18 +119,17 @@ class ProcessPaymentView(APIView):
         user = self.request.user
         data = self.request.data
 
-        tax = 0.18
+        tax = 0.19
 
         nonce = data['nonce']
         shipping_id = str(data['shipping_id'])
         # coupon_name = str(data['coupon_name'])
-
         full_name = data['full_name']
         address_line_1 = data['address_line_1']
-        address_line_2 = data['address_line_2']
+        # address_line_2 = data['address_line_2']
         city = data['city']
-        state_province_region = data['state_province_region']
-        postal_zip_code = data['postal_zip_code']
+        # state_province_region = data['state_province_region']
+        # postal_zip_code = data['postal_zip_code']
         country_region = data['country_region']
         telephone_number = data['telephone_number']
 
@@ -155,7 +152,6 @@ class ProcessPaymentView(APIView):
         cart_items = CartItem.objects.filter(cart=cart)
 
         # revisar si hay stock
-
         for cart_item in cart_items:
             if not Product.objects.filter(id=cart_item.product.id).exists():
                 return Response(
@@ -168,13 +164,13 @@ class ProcessPaymentView(APIView):
                     status=status.HTTP_200_OK
                 )
         
-        total_amount = 0.0
+        total_amount = 0
 
         for cart_item in cart_items:
             total_amount += (float(cart_item.product.price)
                              * float(cart_item.count))
         
-        # Cupones
+        # Cupones #=====
 
         total_amount += (total_amount * tax)
 
@@ -185,7 +181,7 @@ class ProcessPaymentView(APIView):
         shipping_price = shipping.price
 
         total_amount += float(shipping_price)
-        total_amount = round(total_amount, 2)
+        total_amount = round(total_amount, 0)
 
         try:
             # Crear transaccion con braintree
@@ -227,10 +223,10 @@ class ProcessPaymentView(APIView):
                     amount=total_amount,
                     full_name=full_name,
                     address_line_1=address_line_1,
-                    address_line_2=address_line_2,
+                    # address_line_2=address_line_2,
                     city=city,
-                    state_province_region=state_province_region,
-                    postal_zip_code=postal_zip_code,
+                    # state_province_region=state_province_region,
+                    # postal_zip_code=postal_zip_code,
                     country_region=country_region,
                     telephone_number=telephone_number,
                     shipping_name=shipping_name,
@@ -263,13 +259,13 @@ class ProcessPaymentView(APIView):
 
             try:
                 send_mail(
-                    'Your Order Details',
-                    'Hey ' + full_name + ','
-                    + '\n\nWe recieved your order!'
-                    + '\n\nGive us some time to process your order and ship it out to you.'
-                    + '\n\nYou can go on your user dashboard to check the status of your order.'
-                    + '\n\nSincerely,'
-                    + '\nShop Time',
+                    'Detalles de tu compra',
+                    'Ey ' + full_name + ','
+                    + '\n\nHemos recibido tu orden!'
+                    + '\n\nDanos un poco de tiempo para procesarla y hacer el envio.'
+                    + '\n\nPuedes ir a tu perfil para revisar el estado tu orden.'
+                    + '\n\nDe motor gracias <3,'
+                    + '\nHora de comprar',
                     'motospitecommerce@gmail.com',
                     [user.email],
                     fail_silently=False
