@@ -1,6 +1,7 @@
 import Layout from "../../hocs/Layout";
 import { Navigate } from "react-router-dom";
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CartItem from "../../components/cart/CartItem";
 import { setAlert } from "../../redux/actions/alert";
 import { update_item, remove_item } from "../../redux/actions/cart";
@@ -57,9 +58,9 @@ const Checkout = ({
         shipping_id: 0,
     });
 
-    // const [data, setData] = useState({
-    //     instance: {}
-    // });
+    const [data, setData] = useState({
+        instance: {}
+    });
 
     const { 
         full_name,
@@ -80,39 +81,20 @@ const Checkout = ({
         window.scrollTo(0,0)
         get_shipping_options()
     }, [])
-
+    
+    useEffect(() => {
+        get_client_token();
+    }, [user]);
+    
+    useEffect(() => {
+        get_payment_total(shipping_id, '');
+    }, [shipping_id]);
 
     const [render, setRender] = useState(false);
 
     if(!isAuthenticated)
         return <Navigate to='/' />;
-    
-        const renderShipping = () => {
-            if (shipping && shipping !== null && shipping !== undefined) {
-                return (
-                    <div className='mb-5'>
-                        {
-                            shipping.map((shipping_option, index) => (
-                                <div key={index}>
-                                    <input
-                                        onChange={e => onChange(e)}
-                                        value={shipping_option.id}
-                                        name='shipping_id'
-                                        type='radio'
-                                        required
-                                    />
-                                    <label className='ml-4'>
-                                        {shipping_option.name} - ${shipping_option.price} ({shipping_option.time_to_delivery})
-                                    </label>
-                                </div>
-                            ))
-                        }
-                    </div>
-                );
-            }
-        };
-    
-    
+
         const showItems = () => {
             return(
                 <div>
@@ -141,6 +123,93 @@ const Checkout = ({
                 </div>
             )
         }
+    
+        const renderShipping = () => {
+            if (shipping && shipping !== null && shipping !== undefined) {
+                return (
+                    <div className='mb-5'>
+                        {
+                            shipping.map((shipping_option, index) => (
+                                <div key={index}>
+                                    <input
+                                        onChange={e => onChange(e)}
+                                        value={shipping_option.id}
+                                        name='shipping_id'
+                                        type='radio'
+                                        required
+                                    />
+                                    <label className='ml-4'>
+                                        {shipping_option.name} - ${shipping_option.price} ({shipping_option.time_to_delivery})
+                                    </label>
+                                </div>
+                            ))
+                        }
+                    </div>
+                );
+            }
+        };
+        
+        const renderPaymentInfo = () => {
+            if (!clientToken) {
+              if (!isAuthenticated) {
+                  <Link
+                    to="/login"
+                    className="w-full bg-gray-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-500"
+                  >
+                    Iniciar Sesión
+                  </Link>
+              } else {
+                <button
+                  className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                >
+                  <Circles
+                  height="15"
+                  width="15"
+                  color="#ffffff"
+                  ariaLabel="circles-loading"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                  />
+                </button>
+              }
+            } else {
+              return (
+                <>
+                  <DropIn
+                    options={{
+                        authorization: clientToken,
+                        paypal: {
+                            flow: 'vault'
+                        }
+                    }}
+                    onInstance={instance => (data.instance = instance)}
+                  />
+                  <div className="mt-6">
+                    {loading?<button
+                      className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                    >
+                      <Circles
+                        height="15"
+                        width="15"
+                        color="#ffffff"
+                        ariaLabel="circles-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                      />
+                    </button>:
+                    <button
+                    type="submit"
+                    className="w-full bg-green-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-green-500"
+                  >
+                    Place Order
+                  </button>}
+                  </div>
+                </>
+              )
+            }
+          }
 
     return(
         <Layout>
@@ -158,34 +227,30 @@ const Checkout = ({
                     </section>
                     {/* Order summary */}
 
-                    {/* <ShippingForm
+                    <ShippingForm
                         full_name={full_name}
                         address_line_1={address_line_1}
-                        address_line_2={address_line_2}
+                        // address_line_2={address_line_2}
                         city={city}
-                        state_province_region={state_province_region}
-                        postal_zip_code={postal_zip_code}
+                        // state_province_region={state_province_region}
+                        // postal_zip_code={postal_zip_code}
                         telephone_number={telephone_number}
                         countries={countries}
                         onChange={onChange}
-                        buy={buy}
+                        // buy={buy}
                         user={user}
                         renderShipping={renderShipping}
                         total_amount={total_amount}
-                        // total_after_coupon={total_after_coupon}
-                        // total_compare_amount={total_compare_amount}
-                        // estimated_tax={estimated_tax}
-                        // shipping_cost={shipping_cost}
-                        // shipping_id={shipping_id}
-                        // shipping={shipping}
+                        total_compare_amount={total_compare_amount}
+                        estimated_tax={estimated_tax}
+                        shipping_cost={shipping_cost}
+                        shipping_id={shipping_id}
+                        shipping={shipping}
                         // renderPaymentInfo={renderPaymentInfo}
-                        // coupon={coupon}
-                        // apply_coupon={apply_coupon}
-                        // coupon_name={coupon_name}
-                        /> */}
+                        />
                     </div>
                 </div>
-                </div>
+            </div>
         </Layout>
     )
 }
