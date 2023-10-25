@@ -77,6 +77,22 @@ const Checkout = ({
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
+    const buy = async e => {
+        e.preventDefault();
+        let nonce = await data.instance.requestPaymentMethod();
+        process_payment(
+            nonce,
+            shipping_id,
+            '',
+            full_name,
+            address_line_1,
+            city,
+            country_region,
+            telephone_number
+          );
+      }
+    
+
     useEffect(() => {
         window.scrollTo(0,0)
         get_shipping_options()
@@ -237,7 +253,7 @@ const Checkout = ({
                         telephone_number={telephone_number}
                         countries={countries}
                         onChange={onChange}
-                        // buy={buy}
+                        buy={buy}
                         user={user}
                         renderShipping={renderShipping}
                         total_amount={total_amount}
