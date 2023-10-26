@@ -35,36 +35,69 @@ const ShippingForm = ({
 
               <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
                 <dt className="flex items-center text-sm text-gray-600">
-                  <span>Shipping estimate</span>
-                  <a href="#" className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
+                  <span>Envió estimado</span>
+                  <a href="/" className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Learn more about how shipping is calculated</span>
                     <QuestionMarkCircleIcon className="h-5 w-5" aria-hidden="true" />
                   </a>
                 </dt>
-                <dd className="text-sm font-medium text-gray-900">{shipping && shipping_id !== 0 ? <>${shipping_cost}</>:<div className="text-red-500">(Please select shipping option)</div>}</dd>
+                <dd className="text-sm font-medium text-gray-900">
+                    {shipping && shipping_id !== 0 ? (
+                        <>
+                        {new Intl.NumberFormat('es-CO', {
+                            style: 'currency',
+                            currency: 'COP',
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0,
+                        }).format(shipping_cost)}
+                        </>
+                    ) : (
+                        <div className="text-red-500">(Por favor, selecciona una opción de envío)</div>
+                    )}
+                </dd>
               </div>
 
               <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
                 <dt className="flex text-sm text-gray-600">
-                  <span>Tax estimate</span>
-                  <a href="#" className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
+                  <span>Impuestos estimados</span>
+                  <a href="/" className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Learn more about how tax is calculated</span>
                     <QuestionMarkCircleIcon className="h-5 w-5" aria-hidden="true" />
                   </a>
                 </dt>
-                <dd className="text-sm font-medium text-gray-900">${estimated_tax}</dd>
+                <dd className="text-sm font-medium text-gray-900">
+                    {new Intl.NumberFormat('es-CO', {
+                        style: 'currency',
+                        currency: 'COP',
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 0,
+                    }).format(estimated_tax)}
+                </dd>
               </div>
               
               <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
                 <dt className="flex text-sm text-gray-600">
                   <span>Subtotal</span>
                 </dt>
-                <dd className="text-sm font-medium text-gray-900">${total_compare_amount}</dd>
+                <dd className="text-sm font-medium text-gray-900">
+                    {new Intl.NumberFormat('es-CO', {
+                        style: 'currency',
+                        currency: 'COP',
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 0,
+                    }).format(total_compare_amount)}
+                </dd>
               </div>
-
               <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
                 <dt className="text-base font-medium text-gray-900">Order total</dt>
-                <dd className="text-base font-medium text-gray-900">${total_amount}</dd>
+                <dd className="text-base font-medium text-gray-900">
+                    {new Intl.NumberFormat('es-CO', {
+                        style: 'currency',
+                        currency: 'COP',
+                        minimumFractionDigits: 0,
+                        maximumFractionDigits: 0,
+                    }).format(total_amount)}
+                </dd>
               </div>
 
               

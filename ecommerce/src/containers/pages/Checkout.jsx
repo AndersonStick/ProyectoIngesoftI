@@ -155,7 +155,12 @@ const Checkout = ({
                                         required
                                     />
                                     <label className='ml-4'>
-                                        {shipping_option.name} - ${shipping_option.price} ({shipping_option.time_to_delivery})
+                                        {shipping_option.name} - {new Intl.NumberFormat('es-CO', {
+                                            style: 'currency',
+                                            currency: 'COP',
+                                            minimumFractionDigits: 0,
+                                            maximumFractionDigits: 0,
+                                        }).format(shipping_option.price)} ({shipping_option.time_to_delivery})
                                     </label>
                                 </div>
                             ))
