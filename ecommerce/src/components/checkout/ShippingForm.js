@@ -89,7 +89,7 @@ const ShippingForm = ({
                 </dd>
               </div>
               <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
-                <dt className="text-base font-medium text-gray-900">Order total</dt>
+                <dt className="text-base font-medium text-gray-900">Total</dt>
                 <dd className="text-base font-medium text-gray-900">
                     {new Intl.NumberFormat('es-CO', {
                         style: 'currency',
@@ -168,18 +168,20 @@ const ShippingForm = ({
                 </div>
 
 
-                <div className="sm:pt-5">
-                    <div className="flex">
-                        <label htmlFor="country_region" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2 pr-28">
-                            País*
-                        </label>
-                        <select
-                            id='country_region'
-                            name='country_region'
-                            onChange={e => onChange(e)}
-                            className="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
-                        >
-                            {   countries &&
+                <div className="">
+                    <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                        Country/Region*
+                    </label>
+                    <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-gray-200 sm:pt-5">
+              <div className=" sm:col-span-2">
+                <select
+                  id='country_region'
+                  name='country_region'
+                  onChange={e => onChange(e)}
+                  className="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
+                >
+                  {
+                                countries && 
                                 countries !== null &&
                                 countries !== undefined &&
                                 countries.map((country, index) => (
@@ -188,8 +190,9 @@ const ShippingForm = ({
                                     </option>
                                 ))
                             }
-                        </select>
-                    </div>
+                </select>
+              </div>
+            </div>
                 </div>
 
                 <div className="sm:grid sm:grid-cols-3 mb-4 sm:gap-4 sm:items-start  sm:border-gray-200 sm:pt-5">

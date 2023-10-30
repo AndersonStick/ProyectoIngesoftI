@@ -126,8 +126,8 @@ class ProcessPaymentView(APIView):
         address_line_1 = data['address_line_1']
         # address_line_2 = data['address_line_2']
         city = data['city']
-        state_province_region = data['state_province_region']
-        postal_zip_code = data['postal_zip_code']
+        # state_province_region = data['state_province_region']
+        # postal_zip_code = data['postal_zip_code']
         country_region = data['country_region']
         telephone_number = data['telephone_number']
 
@@ -223,8 +223,8 @@ class ProcessPaymentView(APIView):
                     address_line_1=address_line_1,
                     # address_line_2=address_line_2,
                     city=city,
-                    state_province_region=state_province_region,
-                    postal_zip_code=postal_zip_code,
+                    # state_province_region=state_province_region,
+                    # postal_zip_code=postal_zip_code,
                     country_region=country_region,
                     telephone_number=telephone_number,
                     shipping_name=shipping_name,
@@ -262,7 +262,7 @@ class ProcessPaymentView(APIView):
                     + '\n\nHemos recibido tu orden!'
                     + '\n\nDanos un poco de tiempo para procesarla y hacer el envio.'
                     + '\n\nPuedes ir a tu perfil para revisar el estado tu orden.'
-                    + '\n\nDe motor gracias <3,'
+                    + '\n\nDe motor gracias UwU,'
                     + '\nHora de comprar',
                     'motospitecommerce@gmail.com',
                     [user.email],

@@ -147,7 +147,7 @@ function Navbar({
                 <span className="sr-only">Logo Motospit</span>
                 <img
                   className="h-8 w-auto sm:h-20"
-                  src="https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=c0P8P5BilDAAX8hwao6&_nc_ht=scontent.fbog4-2.fna&oh=00_AfCs3wWvJLASIX6L1GVxzq4DGaIvmOoRM4kyyQAhO3917A&oe=653D4F12"
+                  src="https://scontent.fbog2-3.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=NwmZVrn2DHsAX8WKe5y&_nc_ht=scontent.fbog2-3.fna&oh=00_AfBYONzMC2WNV4Lw35pnU0gQyjW-VLA0ucF4WXzhsptuUA&oe=65433DD2"
                   alt="Logo Motospit"
                 />
             </Link>
@@ -210,7 +210,7 @@ function Navbar({
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://scontent.fbog4-2.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=zwQ45HywrMUAX9pSwkh&_nc_ht=scontent.fbog4-2.fna&oh=00_AfB5PzpKMLulKQGfB7_drU-1MPNDJAcgn6W1qQpOtBpYNA&oe=652B82D2"
+                    src="https://scontent.fbog2-3.fna.fbcdn.net/v/t39.30808-6/308859207_159655673376414_7733759750617869538_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeErc5dpZB5ZwkMIXE2m-ic1rsJ_D4LDf7-uwn8PgsN_v3dB8zV_RBIgM84rWOxrEpaYzJHNaU99mnACQWdLq64n&_nc_ohc=NwmZVrn2DHsAX8WKe5y&_nc_ht=scontent.fbog2-3.fna&oh=00_AfBYONzMC2WNV4Lw35pnU0gQyjW-VLA0ucF4WXzhsptuUA&oe=65433DD2"
                     alt="Logo Motospit"
                   />
                 </div>
