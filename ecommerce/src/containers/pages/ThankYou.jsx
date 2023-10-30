@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Navigate } from 'react-router';
 import { reset } from '../../redux/actions/payment';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ThankYou = ({
@@ -30,6 +31,14 @@ const ThankYou = ({
                         Esperamos que te hayas divertido comprando en Motospit Ecommerce
                     </p>
                     </div>
+                </div>
+                <div className='flex justify-center'>
+                    <Link to='/'>
+                            <button
+                            className="w-48 bg-custom-blue border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-custom-hover-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-custom-blue mb-5">
+                            Volver a la tienda
+                            </button>
+                    </Link>
                 </div>
             </div>
         </Layout>
