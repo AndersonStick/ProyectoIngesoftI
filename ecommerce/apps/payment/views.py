@@ -79,10 +79,10 @@ class GetPaymentTotalView(APIView):
                                             * float(cart_item.count))
 
                 # total_compare_amount = total_compare_amount
-                original_price = total_amount
+                original_price = round(total_amount,0)
 
                 # Impuesto estimado
-                estimated_tax = round(total_amount * tax, 2)
+                estimated_tax = round(total_amount * tax, 0)
 
                 total_amount += (total_amount * tax)
 
@@ -99,7 +99,6 @@ class GetPaymentTotalView(APIView):
 
                 return Response({
                     'original_price': f'{original_price:.2f}',
-                    # 'total_after_coupon': f'{total_after_coupon:.2f}',
                     'total_amount': f'{total_amount:.2f}',
                     'total_compare_amount': f'{total_compare_amount:.2f}',
                     'estimated_tax': f'{estimated_tax:.2f}',
@@ -123,13 +122,12 @@ class ProcessPaymentView(APIView):
 
         nonce = data['nonce']
         shipping_id = str(data['shipping_id'])
-        # coupon_name = str(data['coupon_name'])
         full_name = data['full_name']
         address_line_1 = data['address_line_1']
         # address_line_2 = data['address_line_2']
         city = data['city']
-        # state_province_region = data['state_province_region']
-        # postal_zip_code = data['postal_zip_code']
+        state_province_region = data['state_province_region']
+        postal_zip_code = data['postal_zip_code']
         country_region = data['country_region']
         telephone_number = data['telephone_number']
 
@@ -225,8 +223,8 @@ class ProcessPaymentView(APIView):
                     address_line_1=address_line_1,
                     # address_line_2=address_line_2,
                     city=city,
-                    # state_province_region=state_province_region,
-                    # postal_zip_code=postal_zip_code,
+                    state_province_region=state_province_region,
+                    postal_zip_code=postal_zip_code,
                     country_region=country_region,
                     telephone_number=telephone_number,
                     shipping_name=shipping_name,
