@@ -170,7 +170,7 @@ const ShippingForm = ({
 
                 <div className="">
                     <label htmlFor="username" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                        Country/Region*
+                        País*
                     </label>
                     <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-gray-200 sm:pt-5">
               <div className=" sm:col-span-2">
