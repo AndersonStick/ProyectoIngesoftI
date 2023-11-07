@@ -119,7 +119,7 @@ export const process_payment = (
         dispatch({
             type: PAYMENT_FAIL
         });
-        dispatch(setAlert('Error processing payment', 'bg-red-100'));
+        dispatch(setAlert('Error procesando el pago', 'bg-red-100'));
     }
 
     dispatch({
