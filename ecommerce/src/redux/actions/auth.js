@@ -359,7 +359,7 @@ export const reset_password_confirm = (uid, token, new_password, re_new_password
                 dispatch({
                     type: REMOVE_AUTH_LOADING
                 });
-                dispatch(setAlert('Password has been reset successfully', 'bg-green-100'));
+                dispatch(setAlert('La contraseña ha sido restablecida exitosamente', 'bg-green-100'));
             } else {
                 dispatch({
                     type: RESET_PASSWORD_CONFIRM_FAIL
