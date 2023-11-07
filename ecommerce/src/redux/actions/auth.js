@@ -386,5 +386,5 @@ export const logout = () => dispatch => {
     dispatch({
         type: LOGOUT
     });
-    dispatch(setAlert('Succesfully logged out', 'bg-green-100'));
+    dispatch(setAlert('Cierre de sesión exitoso', 'bg-green-100'));
 }
